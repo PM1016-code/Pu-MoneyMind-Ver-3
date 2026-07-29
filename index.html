@@ -375,12 +375,12 @@
     .hammer-click-flare{
       position:fixed;z-index:9998;width:12px;height:12px;border:2px solid rgba(255,230,148,.9);
       border-radius:50%;pointer-events:none;box-shadow:0 0 16px rgba(255,205,86,.85),inset 0 0 8px rgba(255,248,204,.72);
-      transform:translate(-50%,-50%) scale(.3);animation:hammer-flare .55s cubic-bezier(.2,.75,.2,1) forwards;
+      transform:translate(-50%,-50%) scale(.3);animation:hammer-flare .4s cubic-bezier(.2,.75,.2,1) forwards;
     }
     .hammer-spark{
       position:fixed;z-index:9999;width:4px;height:4px;border-radius:50%;pointer-events:none;
       background:#fff2ad;box-shadow:0 0 7px #f0bd49;transform:translate(-50%,-50%);
-      animation:hammer-spark .48s ease-out forwards;
+      animation:hammer-spark .36s ease-out forwards;
     }
     @keyframes hammer-flare{to{opacity:0;transform:translate(-50%,-50%) scale(4.4)}}
     @keyframes hammer-spark{to{opacity:0;transform:translate(calc(-50% + var(--spark-x)),calc(-50% + var(--spark-y))) scale(.2)}}
@@ -543,7 +543,7 @@
       if(!hammer||!finePointer.matches||reducedMotion.matches)return;
       document.documentElement.classList.add('gold-hammer-enabled');
       let x=-100,y=-100,currentX=x,currentY=y,angle=-28,raf=0;
-      const draw=()=>{currentX+=(x-currentX)*.42;currentY+=(y-currentY)*.42;hammer.style.transform=`translate3d(${currentX-9}px,${currentY-8}px,0) rotate(${angle}deg)`;raf=requestAnimationFrame(draw)};
+      const draw=()=>{currentX+=(x-currentX)*.68;currentY+=(y-currentY)*.68;hammer.style.transform=`translate3d(${currentX-9}px,${currentY-8}px,0) rotate(${angle}deg)`;raf=requestAnimationFrame(draw)};
       const show=()=>hammer.classList.add('is-visible');
       document.addEventListener('pointermove',event=>{x=event.clientX;y=event.clientY;show()},{passive:true});
       document.addEventListener('pointerleave',()=>hammer.classList.remove('is-visible'));
@@ -552,7 +552,7 @@
         if(event.pointerType&&event.pointerType!=='mouse')return;
         angle=-8;hammer.classList.add('is-pressing');
         const flare=document.createElement('span');flare.className='hammer-click-flare';flare.style.left=`${event.clientX}px`;flare.style.top=`${event.clientY}px`;document.body.appendChild(flare);flare.addEventListener('animationend',()=>flare.remove(),{once:true});
-        for(let i=0;i<6;i++){const spark=document.createElement('span');const sparkAngle=(Math.PI*2*i/6)+Math.random()*.35;const distance=17+Math.random()*15;spark.className='hammer-spark';spark.style.left=`${event.clientX}px`;spark.style.top=`${event.clientY}px`;spark.style.setProperty('--spark-x',`${Math.cos(sparkAngle)*distance}px`);spark.style.setProperty('--spark-y',`${Math.sin(sparkAngle)*distance}px`);document.body.appendChild(spark);spark.addEventListener('animationend',()=>spark.remove(),{once:true})}
+        for(let i=0;i<4;i++){const spark=document.createElement('span');const sparkAngle=(Math.PI*2*i/4)+Math.random()*.35;const distance=17+Math.random()*15;spark.className='hammer-spark';spark.style.left=`${event.clientX}px`;spark.style.top=`${event.clientY}px`;spark.style.setProperty('--spark-x',`${Math.cos(sparkAngle)*distance}px`);spark.style.setProperty('--spark-y',`${Math.sin(sparkAngle)*distance}px`);document.body.appendChild(spark);spark.addEventListener('animationend',()=>spark.remove(),{once:true})}
       });
       document.addEventListener('pointerup',()=>{angle=-28;hammer.classList.remove('is-pressing')});
       document.addEventListener('pointercancel',()=>{angle=-28;hammer.classList.remove('is-pressing')});
