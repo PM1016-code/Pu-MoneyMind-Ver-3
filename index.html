@@ -361,6 +361,37 @@
     .navlinks a:focus-visible{outline:2px solid #fff0a8;outline-offset:3px}
     @media(prefers-reduced-motion:reduce){.navlinks a,.navlinks a::after{transition:none}.navlinks a:hover,.navlinks a:focus-visible{transform:none}}
   </style>
+  <style>
+    /* Premium golden hammer cursor — desktop pointer devices only */
+    .gold-hammer-cursor{
+      position:fixed;left:0;top:0;z-index:9999;width:42px;height:42px;
+      pointer-events:none;opacity:0;transform:translate3d(-100px,-100px,0) rotate(-28deg);
+      transform-origin:48% 54%;will-change:transform,opacity;transition:opacity .18s ease;
+      filter:drop-shadow(0 3px 5px rgba(0,0,0,.48)) drop-shadow(0 0 8px rgba(255,218,112,.32));
+    }
+    .gold-hammer-cursor.is-visible{opacity:1}
+    .gold-hammer-cursor.is-pressing{filter:drop-shadow(0 2px 4px rgba(0,0,0,.5)) drop-shadow(0 0 14px rgba(255,225,133,.72))}
+    .gold-hammer-cursor svg{width:100%;height:100%;overflow:visible}
+    .hammer-click-flare{
+      position:fixed;z-index:9998;width:12px;height:12px;border:2px solid rgba(255,230,148,.9);
+      border-radius:50%;pointer-events:none;box-shadow:0 0 16px rgba(255,205,86,.85),inset 0 0 8px rgba(255,248,204,.72);
+      transform:translate(-50%,-50%) scale(.3);animation:hammer-flare .55s cubic-bezier(.2,.75,.2,1) forwards;
+    }
+    .hammer-spark{
+      position:fixed;z-index:9999;width:4px;height:4px;border-radius:50%;pointer-events:none;
+      background:#fff2ad;box-shadow:0 0 7px #f0bd49;transform:translate(-50%,-50%);
+      animation:hammer-spark .48s ease-out forwards;
+    }
+    @keyframes hammer-flare{to{opacity:0;transform:translate(-50%,-50%) scale(4.4)}}
+    @keyframes hammer-spark{to{opacity:0;transform:translate(calc(-50% + var(--spark-x)),calc(-50% + var(--spark-y))) scale(.2)}}
+    @media (hover:hover) and (pointer:fine){
+      html.gold-hammer-enabled,html.gold-hammer-enabled body,html.gold-hammer-enabled a,
+      html.gold-hammer-enabled button,html.gold-hammer-enabled [role="button"],
+      html.gold-hammer-enabled .review-stage{cursor:none!important}
+      html.gold-hammer-enabled input,html.gold-hammer-enabled textarea,html.gold-hammer-enabled select{cursor:auto!important}
+    }
+    @media (prefers-reduced-motion:reduce){.gold-hammer-cursor,.hammer-click-flare,.hammer-spark{display:none!important}}
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
@@ -400,6 +431,19 @@
     <section><div class="wrap"><div class="cta panel"><span class="eyebrow">Ask before you enroll</span><h2>ยังไม่แน่ใจว่าเริ่มตรงไหน?</h2><p>ส่งระดับประสบการณ์ เวลาที่สะดวก และสิ่งที่อยากพัฒนาให้ทีมงานช่วยอธิบายความแตกต่าง โดยขอรายละเอียดราคาและสิทธิ์ล่าสุดก่อนชำระเงิน</p><a class="btn line track" data-cta="final-consult" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer" aria-label="ให้ทีมช่วยวางแผนเส้นทางเรียนผ่าน LINE OA">ให้ทีมช่วยวางแผนเส้นทางเรียน</a><div class="legal"><div><b>ก่อนชำระเงิน โปรดยืนยัน</b><br><span class="small">วันเริ่ม ตาราง Live สิทธิ์ Community เครื่องมือที่รวม ช่องทางชำระ ภาษี/ค่าธรรมเนียม และนโยบายคืนเงิน</span></div><div><b>การติดต่อ</b><br><span class="small">ช่องทางหลัก: LINE OA ของ PU MoneyMind หากมีบริษัทหรือผู้รับเงิน กรุณาตรวจชื่อในเอกสารชำระเงินให้ตรงกัน</span></div></div></div></div></section>
   </main>
   <footer><div class="wrap foot"><div><b style="color:#fff">PU MoneyMind</b><p>Professional Trading Education · เรียนรู้ก่อนเสี่ยง</p><p class="small">© <span id="year"></span> PU MoneyMind. All rights reserved.</p></div><nav class="footlinks" aria-label="ข้อมูลสำคัญ"><a href="terms.html">เงื่อนไขการใช้บริการ</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">ติดต่อ LINE OA</a></nav></div></footer>
+  <div class="gold-hammer-cursor" id="goldHammerCursor" aria-hidden="true">
+    <svg viewBox="0 0 48 48" role="presentation">
+      <defs>
+        <linearGradient id="hammerGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4bd"/><stop offset=".33" stop-color="#f2c85e"/><stop offset=".7" stop-color="#b97820"/><stop offset="1" stop-color="#ffe79a"/></linearGradient>
+        <linearGradient id="hammerHandle" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b451d"/><stop offset=".55" stop-color="#c77a32"/><stop offset="1" stop-color="#5a2d14"/></linearGradient>
+      </defs>
+      <path d="M20 18.5 25 23l-14.2 17c-1.1 1.3-3 1.4-4.2.3l-.4-.4c-1.2-1.1-1.3-3-.2-4.2l14-17.2Z" fill="url(#hammerHandle)" stroke="#f7d477" stroke-width="1.15"/>
+      <path d="M18.1 9.3c.8-1 2.1-1.5 3.4-1.2l13.1 2.8c1.4.3 2.5 1.4 2.8 2.8l.8 4.5-5.9 6.7-4.4-1.5-3.7 4.2-9.3-8.3 3.7-4.2-1.2-4.5.7-1.3Z" fill="url(#hammerGold)" stroke="#fff0ae" stroke-width="1.15"/>
+      <path d="m33.1 11.5 4.3 2.2.8 4.5-5.9 6.7-2.3-.8Z" fill="#9f651d" opacity=".58"/>
+      <path d="M20.8 10.5 31 12.7" fill="none" stroke="#fff9d9" stroke-linecap="round" stroke-width="1.3" opacity=".9"/>
+      <circle cx="16" cy="32" r="1.2" fill="#ffe593" opacity=".8"/>
+    </svg>
+  </div>
   <script>
     const reviews=['4049','4050','4051','4052','4053','4054','4055','4056','4057','4058','4059','4060','4061','4062','4063'];
     const viewer=document.getElementById('reviewViewer'),reviewCount=document.getElementById('reviewCount'),reviewNext=document.getElementById('reviewNext'),reviewPrev=document.getElementById('reviewPrev'),reviewNextButton=document.getElementById('reviewNextButton'),reviewAlbum=document.getElementById('reviewAlbum');
@@ -492,6 +536,29 @@
     riskCalculator.addEventListener('change',calculateRisk);
     calculateRisk();
     document.getElementById('year').textContent=new Date().getFullYear();
+    (()=>{
+      const finePointer=window.matchMedia('(hover:hover) and (pointer:fine)');
+      const reducedMotion=window.matchMedia('(prefers-reduced-motion:reduce)');
+      const hammer=document.getElementById('goldHammerCursor');
+      if(!hammer||!finePointer.matches||reducedMotion.matches)return;
+      document.documentElement.classList.add('gold-hammer-enabled');
+      let x=-100,y=-100,currentX=x,currentY=y,angle=-28,raf=0;
+      const draw=()=>{currentX+=(x-currentX)*.42;currentY+=(y-currentY)*.42;hammer.style.transform=`translate3d(${currentX-9}px,${currentY-8}px,0) rotate(${angle}deg)`;raf=requestAnimationFrame(draw)};
+      const show=()=>hammer.classList.add('is-visible');
+      document.addEventListener('pointermove',event=>{x=event.clientX;y=event.clientY;show()},{passive:true});
+      document.addEventListener('pointerleave',()=>hammer.classList.remove('is-visible'));
+      document.addEventListener('pointerenter',show);
+      document.addEventListener('pointerdown',event=>{
+        if(event.pointerType&&event.pointerType!=='mouse')return;
+        angle=-8;hammer.classList.add('is-pressing');
+        const flare=document.createElement('span');flare.className='hammer-click-flare';flare.style.left=`${event.clientX}px`;flare.style.top=`${event.clientY}px`;document.body.appendChild(flare);flare.addEventListener('animationend',()=>flare.remove(),{once:true});
+        for(let i=0;i<6;i++){const spark=document.createElement('span');const sparkAngle=(Math.PI*2*i/6)+Math.random()*.35;const distance=17+Math.random()*15;spark.className='hammer-spark';spark.style.left=`${event.clientX}px`;spark.style.top=`${event.clientY}px`;spark.style.setProperty('--spark-x',`${Math.cos(sparkAngle)*distance}px`);spark.style.setProperty('--spark-y',`${Math.sin(sparkAngle)*distance}px`);document.body.appendChild(spark);spark.addEventListener('animationend',()=>spark.remove(),{once:true})}
+      });
+      document.addEventListener('pointerup',()=>{angle=-28;hammer.classList.remove('is-pressing')});
+      document.addEventListener('pointercancel',()=>{angle=-28;hammer.classList.remove('is-pressing')});
+      raf=requestAnimationFrame(draw);
+      window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
+    })();
   </script>
 </body>
 </html>
