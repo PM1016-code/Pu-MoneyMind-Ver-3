@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/sitemap.xml
