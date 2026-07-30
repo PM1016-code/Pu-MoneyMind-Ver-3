@@ -382,13 +382,15 @@
     .gold-arrow-cursor.is-pressing{filter:drop-shadow(0 2px 3px rgba(0,0,0,.5)) drop-shadow(0 0 12px rgba(255,231,157,.68))}
     .gold-arrow-cursor svg{width:100%;height:100%;overflow:visible}
     .cursor-water-ripple{
-      position:fixed;z-index:9998;width:12px;height:12px;border:1.5px solid rgba(255,225,145,.88);
-      border-radius:50%;pointer-events:none;box-shadow:0 0 12px rgba(226,179,72,.38),inset 0 0 8px rgba(255,247,205,.3);
-      transform:translate(-50%,-50%) scale(.25);animation:cursor-ripple .68s cubic-bezier(.16,.72,.25,1) forwards;
+      position:fixed;z-index:9998;width:16px;height:9px;border:1px solid rgba(255,226,150,.78);
+      border-radius:50%;pointer-events:none;contain:layout paint;transform:translate(-50%,-50%) scale(.22);
+      animation:river-ripple-main .56s cubic-bezier(.12,.66,.22,1) forwards;
     }
-    .cursor-water-ripple::after{content:'';position:absolute;inset:-2px;border:1px solid rgba(255,243,197,.65);border-radius:inherit;animation:cursor-ripple-inner .68s .08s ease-out forwards}
-    @keyframes cursor-ripple{70%{opacity:.72}to{opacity:0;transform:translate(-50%,-50%) scale(5.2)}}
-    @keyframes cursor-ripple-inner{to{opacity:0;transform:scale(1.5)}}
+    .cursor-water-ripple::before,.cursor-water-ripple::after{content:'';position:absolute;inset:-1px;border:1px solid rgba(255,242,199,.58);border-radius:inherit;opacity:0;transform:scale(.25)}
+    .cursor-water-ripple::before{animation:river-ripple-ring .5s .025s cubic-bezier(.12,.66,.22,1) forwards}
+    .cursor-water-ripple::after{animation:river-ripple-ring .48s .075s cubic-bezier(.12,.66,.22,1) forwards}
+    @keyframes river-ripple-main{0%{opacity:.82;transform:translate(-50%,-50%) scale(.22)}55%{opacity:.48}to{opacity:0;transform:translate(-50%,-50%) scale(5.4,4.1)}}
+    @keyframes river-ripple-ring{0%{opacity:.62;transform:scale(.25)}60%{opacity:.34}to{opacity:0;transform:scale(4.4,3.45)}}
     @media (hover:hover) and (pointer:fine){
       html.gold-arrow-enabled,html.gold-arrow-enabled body,html.gold-arrow-enabled a,
       html.gold-arrow-enabled button,html.gold-arrow-enabled [role="button"],
@@ -545,7 +547,7 @@
       if(!arrow||!finePointer.matches||reducedMotion.matches)return;
       document.documentElement.classList.add('gold-arrow-enabled');
       let x=-100,y=-100,currentX=x,currentY=y,raf=0;
-      const draw=()=>{currentX+=(x-currentX)*.82;currentY+=(y-currentY)*.82;arrow.style.transform=`translate3d(${currentX-2}px,${currentY-2}px,0)`;raf=requestAnimationFrame(draw)};
+      const draw=()=>{currentX+=(x-currentX)*.96;currentY+=(y-currentY)*.96;arrow.style.transform=`translate3d(${currentX-2}px,${currentY-2}px,0)`;raf=requestAnimationFrame(draw)};
       const show=()=>arrow.classList.add('is-visible');
       document.addEventListener('pointermove',event=>{x=event.clientX;y=event.clientY;show()},{passive:true});
       document.addEventListener('pointerleave',()=>arrow.classList.remove('is-visible'));
@@ -553,7 +555,7 @@
       document.addEventListener('pointerdown',event=>{
         if(event.pointerType&&event.pointerType!=='mouse')return;
         arrow.classList.add('is-pressing');
-        const ripple=document.createElement('span');ripple.className='cursor-water-ripple';ripple.style.left=`${event.clientX}px`;ripple.style.top=`${event.clientY}px`;document.body.appendChild(ripple);ripple.addEventListener('animationend',()=>ripple.remove(),{once:true});
+        const ripple=document.createElement('span');ripple.className='cursor-water-ripple';ripple.style.left=`${event.clientX}px`;ripple.style.top=`${event.clientY}px`;document.body.appendChild(ripple);setTimeout(()=>ripple.remove(),620);
       });
       document.addEventListener('pointerup',()=>arrow.classList.remove('is-pressing'));
       document.addEventListener('pointercancel',()=>arrow.classList.remove('is-pressing'));
