@@ -174,7 +174,9 @@
     .risk-summary{margin:0;border-top:1px solid var(--line)}
     .risk-summary div{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
     .risk-summary dt{font-weight:600}.risk-summary dd{margin:0;font:700 1.08rem 'LINE Seed Sans TH',sans-serif;text-align:right}
-    .risk-level-badge{display:inline-flex;margin-top:22px;padding:8px 14px;border-radius:999px;background:rgba(69,212,131,.14);color:var(--green);font-weight:700}
+    .risk-level-badge{display:inline-flex;margin-top:22px;padding:8px 14px;border:1px solid rgba(69,212,131,.42);border-radius:999px;background:rgba(69,212,131,.14);color:var(--green);font-weight:700}
+    .risk-level-badge[data-risk-tone="moderate"]{border-color:rgba(244,207,107,.68);background:rgba(217,168,43,.14);color:#f4cf6b;box-shadow:0 0 16px rgba(217,168,43,.08)}
+    .risk-level-badge[data-risk-tone="high"]{border-color:rgba(255,112,122,.68);background:rgba(210,54,67,.14);color:#ff7e88;box-shadow:0 0 16px rgba(210,54,67,.08)}
     .risk-analysis{grid-column:1/-1;padding:25px 28px;border-left:3px solid var(--primary)}
     .risk-analysis h3{margin:0 0 8px;color:var(--yellow)}.risk-analysis p{margin:0;color:#ded8e7}
     /* Balanced two-column Data-driven coaching layout */
@@ -565,6 +567,7 @@
       if(riskPercent>2&&riskPercent<=3){level='สูง';tone='ความเสี่ยงต่อออเดอร์อยู่ในระดับสูง การขาดทุนต่อเนื่องไม่กี่ครั้งอาจกระทบเงินทุนอย่างมีนัยสำคัญ';}
       if(riskPercent>3){level='สูงมาก';tone='ความเสี่ยงต่อออเดอร์สูงมาก ควรพิจารณาลดเปอร์เซ็นต์ความเสี่ยงและทบทวนแผนก่อนเปิดสถานะ';}
       levelEl.textContent=`ความเสี่ยงระดับ${level}`;
+      levelEl.dataset.riskTone=riskPercent>2?'high':riskPercent>1?'moderate':'low';
       const tenLosses=capital*(1-Math.pow(1-riskPercent/100,10));
       const minLotLoss=priceDistance*contractSize*minLot;
       const actualRisk=lot>=minLot?priceDistance*contractSize*lot:0;
