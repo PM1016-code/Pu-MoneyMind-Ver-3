@@ -594,7 +594,7 @@
     riskCalculator.addEventListener('change',calculateRisk);
     calculateRisk();
     (()=>{
-      let helpTimer=0,helpShown=false;
+      let helpTimer=0,helpShown=false,helpAudio=null;
       const popup=document.createElement('aside');
       popup.className='risk-help-popup';popup.id='riskHelpPopup';popup.hidden=true;popup.setAttribute('role','dialog');popup.setAttribute('aria-labelledby','riskHelpTitle');popup.setAttribute('aria-describedby','riskHelpText');
       popup.innerHTML='<button class="risk-help-close" type="button" aria-label="Close message">&times;</button><span class="risk-help-kicker">Risk planning support</span><h3 id="riskHelpTitle">Not sure how much risk is appropriate?</h3><p id="riskHelpText">If lot size, stop loss or drawdown is still unclear, ask the team to explain the framework before applying the result.</p><a class="risk-help-cta track" data-cta="risk-calculator-help" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">Plan my trading approach</a><small class="risk-help-note">Educational guidance · no outcome guarantee</small>';
@@ -602,10 +602,13 @@
       popup.querySelector('.risk-help-cta').addEventListener('click',()=>{const detail={cta:'risk-calculator-help',page:location.pathname};window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'line_cta_click',...detail});window.dispatchEvent(new CustomEvent('pumm:cta',{detail}))});
       const closePopup=()=>{popup.classList.remove('is-visible');setTimeout(()=>{popup.hidden=true},280)};
       popup.querySelector('.risk-help-close').addEventListener('click',closePopup);
+      const primeHelpAudio=()=>{const AudioEngine=window.AudioContext||window.webkitAudioContext;if(!AudioEngine)return;if(!helpAudio)helpAudio=new AudioEngine();if(helpAudio.state==='suspended')helpAudio.resume().catch(()=>{})};
+      const playHelpChime=()=>{if(!helpAudio||helpAudio.state!=='running')return;const now=helpAudio.currentTime;[[659.25,0],[783.99,.13]].forEach(([frequency,offset])=>{const oscillator=helpAudio.createOscillator(),gain=helpAudio.createGain();oscillator.type='sine';oscillator.frequency.setValueAtTime(frequency,now+offset);gain.gain.setValueAtTime(.0001,now+offset);gain.gain.exponentialRampToValueAtTime(.045,now+offset+.018);gain.gain.exponentialRampToValueAtTime(.0001,now+offset+.3);oscillator.connect(gain);gain.connect(helpAudio.destination);oscillator.start(now+offset);oscillator.stop(now+offset+.32)})};
       const scheduleHelp=()=>{
         clearTimeout(helpTimer);
+        primeHelpAudio();
         if(helpShown||!riskCalculator.checkValidity())return;
-        helpTimer=setTimeout(()=>{if(helpShown||!riskCalculator.checkValidity())return;helpShown=true;popup.hidden=false;requestAnimationFrame(()=>popup.classList.add('is-visible'))},10000);
+        helpTimer=setTimeout(()=>{if(helpShown||!riskCalculator.checkValidity())return;helpShown=true;popup.hidden=false;playHelpChime();requestAnimationFrame(()=>popup.classList.add('is-visible'))},5000);
       };
       riskCalculator.addEventListener('input',scheduleHelp);
       riskCalculator.addEventListener('change',scheduleHelp);
