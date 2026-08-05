@@ -481,6 +481,10 @@
     @media(prefers-reduced-motion:reduce){.welcome-logo-stage,.welcome-logo-stage .welcome-logo,.welcome-crown,.welcome-crown-glint,.welcome-crown-glint::before,.welcome-crown-glint::after{animation:none}}
   </style>
   <style>
+    .welcome-gate::after{content:"";position:absolute;z-index:1;inset:-30%;pointer-events:none;background:linear-gradient(112deg,transparent 34%,rgba(201,182,255,.035) 43%,rgba(198,168,109,.075) 50%,rgba(248,187,217,.035) 56%,transparent 67%);filter:blur(24px);mix-blend-mode:screen;opacity:.72;transform:translate3d(-38%,0,0) rotate(-3deg);animation:welcomeAmbientSweep 14s ease-in-out infinite;will-change:transform,opacity}@keyframes welcomeAmbientSweep{0%,100%{opacity:.34;transform:translate3d(-38%,2%,0) rotate(-3deg)}45%{opacity:.72}55%{opacity:.66;transform:translate3d(35%,-2%,0) rotate(2deg)}75%{opacity:.28;transform:translate3d(35%,-2%,0) rotate(2deg)}}
+    @media(prefers-reduced-motion:reduce){.welcome-gate::after{animation:none;opacity:.28;transform:none}}
+  </style>
+  <style>
     .welcome-lang{position:fixed;z-index:6;top:max(22px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));display:flex;align-items:center;gap:4px;padding:5px;border:1px solid rgba(198,168,109,.32);border-radius:999px;background:rgba(17,12,23,.68);box-shadow:0 10px 28px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.05);backdrop-filter:blur(12px)}.welcome-lang a{display:grid;place-items:center;min-width:58px;height:35px;padding:0 12px;border-radius:999px;color:#a99eae;font-size:.75rem;font-weight:800;letter-spacing:.08em;transition:background .2s,color .2s,transform .2s}.welcome-lang a:hover,.welcome-lang a:focus-visible{color:#fff4d2;transform:translateY(-1px);outline:none}.welcome-lang a[aria-current="page"]{background:linear-gradient(135deg,#73542a,#b99250);color:#fffaf0;box-shadow:0 5px 15px rgba(84,56,22,.34)}
     @media(max-width:560px){.welcome-lang{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right))}.welcome-lang a{min-width:50px;height:32px;padding-inline:9px;font-size:.7rem}}
   </style>
