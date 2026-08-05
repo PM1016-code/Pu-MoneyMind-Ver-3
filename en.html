@@ -500,6 +500,7 @@
     </svg>
   </div>
   <script>
+    document.getElementById('goldArrowCursor')?.remove();
     const reviewMarquee=document.getElementById('reviewMarquee'),reviewMotionToggle=document.getElementById('reviewMotionToggle'),reviewMotionStatus=document.getElementById('reviewMotionStatus');
     let reviewMotionPaused=false;
     function setReviewMotion(paused,selectedId=''){reviewMotionPaused=paused;reviewMarquee.classList.toggle('is-paused',paused);reviewMotionToggle.setAttribute('aria-pressed',String(paused));reviewMotionToggle.textContent=paused?'Resume gallery':'Hold images';reviewMotionStatus.innerHTML=paused?'<strong>Images paused</strong> · Resume when ready':'<strong>Auto-scrolling</strong> · Hover or select an image to pause';document.querySelectorAll('.review-tile').forEach(tile=>tile.classList.toggle('is-selected',Boolean(selectedId)&&tile.dataset.reviewId===selectedId))}

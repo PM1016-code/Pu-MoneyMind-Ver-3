@@ -513,6 +513,7 @@
     </svg>
   </div>
   <script>
+    document.getElementById('goldArrowCursor')?.remove();
     const reviewMarquee=document.getElementById('reviewMarquee'),reviewMotionToggle=document.getElementById('reviewMotionToggle'),reviewMotionStatus=document.getElementById('reviewMotionStatus');
     let reviewMotionPaused=false;
     function setReviewMotion(paused,selectedId=''){reviewMotionPaused=paused;reviewMarquee.classList.toggle('is-paused',paused);reviewMotionToggle.setAttribute('aria-pressed',String(paused));reviewMotionToggle.textContent=paused?'เล่นต่อ':'พักภาพ';reviewMotionStatus.innerHTML=paused?'<strong>พักภาพแล้ว</strong> · กดเล่นต่อเมื่อต้องการ':'<strong>กำลังเลื่อนอัตโนมัติ</strong> · ชี้เมาส์หรือแตะรูปเพื่อหยุด';document.querySelectorAll('.review-tile').forEach(tile=>tile.classList.toggle('is-selected',Boolean(selectedId)&&tile.dataset.reviewId===selectedId))}
