@@ -12,7 +12,7 @@ Production-ready static site for GitHub Pages. Keep `index.html`, `privacy.html`
 
 ## Owner confirmation before publishing
 
-- Confirm `8+ years`, `1,000+ community members`, and `30+ lessons` are current.
+- Confirm `8+ years`, `2,000+ community members`, and `30+ lessons` are current.
 - Confirm the Master Class promotion price and end date.
 - Confirm whether GSS/TTS are included in each package.
 - Confirm Live schedule, feedback scope, and Community access period.
