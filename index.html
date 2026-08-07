@@ -647,7 +647,7 @@
     riskCalculator.addEventListener('change',calculateRisk);
     calculateRisk();
     (()=>{
-      let helpTimer=0,helpShown=false,helpAudio=null;
+      let helpTimer=0,helpScheduled=false,helpShown=false,helpAudio=null;
       const popup=document.createElement('aside');
       popup.className='risk-help-popup';popup.id='riskHelpPopup';popup.hidden=true;popup.setAttribute('role','dialog');popup.setAttribute('aria-labelledby','riskHelpTitle');popup.setAttribute('aria-describedby','riskHelpText');
       popup.innerHTML='<button class="risk-help-close" type="button" aria-label="ปิดข้อความ">&times;</button><span class="risk-help-kicker">Risk planning support</span><h3 id="riskHelpTitle">ยังไม่แน่ใจว่าควรใช้ความเสี่ยงเท่าไร?</h3><p id="riskHelpText">หากยังไม่เข้าใจ Lot Size, Stop Loss หรือ Drawdown ให้ทีมช่วยอธิบายแนวคิดก่อนนำผลลัพธ์ไปใช้จริง</p><a class="risk-help-cta track" data-cta="risk-calculator-help" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">วางแผนการเทรด</a><small class="risk-help-note">คำแนะนำเชิงการศึกษา · ไม่มีการรับประกันผลลัพธ์</small>';
@@ -658,10 +658,10 @@
       const primeHelpAudio=()=>{const AudioEngine=window.AudioContext||window.webkitAudioContext;if(!AudioEngine)return;if(!helpAudio)helpAudio=new AudioEngine();if(helpAudio.state==='suspended')helpAudio.resume().catch(()=>{})};
       const playHelpChime=()=>{if(!helpAudio||helpAudio.state!=='running')return;const now=helpAudio.currentTime;[[659.25,0],[783.99,.13]].forEach(([frequency,offset])=>{const oscillator=helpAudio.createOscillator(),gain=helpAudio.createGain();oscillator.type='sine';oscillator.frequency.setValueAtTime(frequency,now+offset);gain.gain.setValueAtTime(.0001,now+offset);gain.gain.exponentialRampToValueAtTime(.045,now+offset+.018);gain.gain.exponentialRampToValueAtTime(.0001,now+offset+.3);oscillator.connect(gain);gain.connect(helpAudio.destination);oscillator.start(now+offset);oscillator.stop(now+offset+.32)})};
       const scheduleHelp=()=>{
-        clearTimeout(helpTimer);
         primeHelpAudio();
-        if(helpShown||!riskCalculator.checkValidity())return;
-        helpTimer=setTimeout(()=>{if(helpShown||!riskCalculator.checkValidity())return;helpShown=true;popup.hidden=false;playHelpChime();requestAnimationFrame(()=>popup.classList.add('is-visible'))},5000);
+        if(helpShown||helpScheduled)return;
+        helpScheduled=true;
+        helpTimer=setTimeout(()=>{if(helpShown)return;helpShown=true;popup.hidden=false;playHelpChime();requestAnimationFrame(()=>popup.classList.add('is-visible'))},3000);
       };
       riskCalculator.addEventListener('input',scheduleHelp);
       riskCalculator.addEventListener('change',scheduleHelp);
