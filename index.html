@@ -661,8 +661,9 @@
         primeHelpAudio();
         if(helpShown||helpScheduled)return;
         helpScheduled=true;
-        helpTimer=setTimeout(()=>{if(helpShown)return;helpShown=true;popup.hidden=false;playHelpChime();requestAnimationFrame(()=>popup.classList.add('is-visible'))},3000);
+        helpTimer=setTimeout(()=>{if(helpShown)return;helpShown=true;popup.hidden=false;playHelpChime();requestAnimationFrame(()=>popup.classList.add('is-visible'))},2500);
       };
+      riskCalculator.addEventListener('focusin',scheduleHelp,{once:true});
       riskCalculator.addEventListener('input',scheduleHelp);
       riskCalculator.addEventListener('change',scheduleHelp);
     })();
