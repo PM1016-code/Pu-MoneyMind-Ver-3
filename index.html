@@ -502,9 +502,9 @@
   <style>
     /* Keep the two portrait-led sections comfortably within the viewport. */
     .hero{min-height:690px}.hero-card img{height:min(540px,64vh)}
-    .story>img{justify-self:center;width:min(100%,460px);height:min(560px,68vh);object-position:50% 22%}
-    @media(max-width:900px){.hero{min-height:auto}.hero-card{width:min(100%,620px);margin-inline:auto}.hero-card img{height:min(500px,62vh)}.story>img{width:min(100%,430px);height:min(520px,65vh)}}
-    @media(max-width:560px){.hero-card img{height:min(390px,58vh)}.story>img{width:min(94%,390px);height:min(440px,62vh)}}
+    .story{grid-template-columns:minmax(340px,.8fr) minmax(0,1.2fr);gap:52px}.story>img{justify-self:center;width:min(100%,400px);height:min(540px,72vh);object-position:50% 18%}
+    @media(max-width:900px){.hero{min-height:auto}.hero-card{width:min(100%,620px);margin-inline:auto}.hero-card img{height:min(500px,62vh)}.story{grid-template-columns:1fr;gap:34px}.story>img{width:min(100%,390px);height:min(500px,66vh)}}
+    @media(max-width:560px){.hero-card img{height:min(390px,58vh)}.story>img{width:min(88%,360px);height:min(460px,62vh)}}
   </style>
 </head>
 <body class="welcome-open">
