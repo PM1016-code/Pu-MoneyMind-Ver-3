@@ -524,9 +524,9 @@
     @media(max-width:560px){section{padding:54px 0}.heading{margin-bottom:27px}.heading .eyebrow{margin-bottom:10px}.heading p{margin-top:11px}.source-note{margin-bottom:42px}.cta{padding:44px 18px}.about-social{margin-top:26px}}
   </style>
   <style>
-    .hero-card .hero-video{display:block;width:100%;height:min(540px,64vh);object-fit:cover;border-radius:22px;background:#050505;box-shadow:0 16px 34px rgba(0,0,0,.24)}
-    @media(max-width:900px){.hero-card .hero-video{height:min(500px,62vh)}}
-    @media(max-width:560px){.hero-card .hero-video{height:min(390px,58vh)}}
+    .hero-card:has(.hero-video){padding:10px;overflow:hidden}
+    .hero-card .hero-video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:22px;background:#050505;box-shadow:0 16px 34px rgba(0,0,0,.24)}
+    @media(max-width:560px){.hero-card:has(.hero-video){padding:7px}.hero-card .hero-video{border-radius:19px}}
   </style>
 </head>
 <body class="welcome-open">
