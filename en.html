@@ -515,7 +515,7 @@
   <style>
     .hero-card:has(.hero-video){padding:10px;overflow:hidden}
     .hero-card .hero-video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:22px;background:#050505;box-shadow:0 16px 34px rgba(0,0,0,.24)}
-    @media(min-width:1101px){#top .hero{min-height:calc(100svh - 106px);padding:24px 0}#top .hero-card:has(.hero-video){align-self:start;justify-self:end;width:min(100%,calc(100svh - 290px),640px);margin-top:24px}}
+    @media(min-width:1101px){#top .hero{width:min(1500px,calc(100% - 48px));grid-template-columns:minmax(0,.9fr) minmax(560px,1.1fr);min-height:calc(100svh - 106px);padding:24px 0}#top .hero-card:has(.hero-video){align-self:start;justify-self:end;width:min(100%,calc(100svh - 260px),680px);margin-top:24px}}
     @media(max-width:560px){.hero-card:has(.hero-video){padding:7px}.hero-card .hero-video{border-radius:19px}}
   </style>
   <style>
