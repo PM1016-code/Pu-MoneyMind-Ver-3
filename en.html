@@ -517,6 +517,20 @@
     .hero-card .hero-video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:22px;background:#050505;box-shadow:0 16px 34px rgba(0,0,0,.24)}
     @media(max-width:560px){.hero-card:has(.hero-video){padding:7px}.hero-card .hero-video{border-radius:19px}}
   </style>
+  <style>
+    /* Complete section navigation: a calm primary row with a scrollable section rail. */
+    html{scroll-padding-top:182px}
+    .navin{height:auto;min-height:78px;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections";column-gap:18px;row-gap:8px;padding:8px 0 10px}
+    .navin>.brand{grid-area:brand;align-self:center}
+    .navin>.lang-switch{grid-area:language;justify-self:end;align-self:center}
+    .navin>.gold-cta{grid-area:cta;align-self:center}
+    .navlinks{grid-area:sections;display:flex;width:100%;gap:8px;padding:2px 2px 4px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:rgba(198,168,109,.5) transparent}
+    .navlinks::-webkit-scrollbar{height:4px}.navlinks::-webkit-scrollbar-track{background:transparent}.navlinks::-webkit-scrollbar-thumb{border-radius:99px;background:rgba(198,168,109,.48)}
+    .navlinks a{flex:0 0 auto;scroll-snap-align:start;padding:8px 13px;border:1px solid rgba(231,221,251,.15);border-radius:999px;background:rgba(255,255,255,.035);color:#d9d2e3;font-size:.82rem;line-height:1.2;white-space:nowrap;transition:color .2s,border-color .2s,background .2s,transform .2s}
+    .navlinks a:hover,.navlinks a:focus-visible{color:#fff5d6;border-color:rgba(211,177,94,.58);background:linear-gradient(135deg,rgba(113,76,33,.62),rgba(83,55,113,.48));transform:translateY(-1px);outline:none}
+    @media(max-width:900px){html{scroll-padding-top:182px}.navlinks{display:flex}.navin{grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections"}.navin>.gold-cta{display:inline-flex}}
+    @media(max-width:620px){html{scroll-padding-top:158px}.navin{grid-template-columns:1fr auto;grid-template-areas:"brand language" "sections sections";padding-bottom:8px}.navin>.gold-cta{display:none}.navlinks{margin-inline:0}.navlinks a{padding:8px 12px;font-size:.78rem}}
+  </style>
 </head>
 <body class="welcome-open">
   <section class="welcome-gate" id="welcomeGate" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><nav class="welcome-lang" aria-label="Change language"><a href="index.html" lang="th">TH</a><a href="en.html" lang="en" aria-current="page">EN</a></nav><span class="welcome-door left" aria-hidden="true"></span><span class="welcome-door right" aria-hidden="true"></span><div class="welcome-content"><div class="welcome-logo-stage"><img class="welcome-logo" src="assets/logo-pu-moneymind-transparent.png" width="1536" height="1024" alt="PU MoneyMind logo"><img class="welcome-crown" src="assets/logo-crown-effect.png" width="256" height="210" alt="" aria-hidden="true"><span class="welcome-crown-glint" aria-hidden="true">✦</span></div><span class="welcome-kicker">Professional Trading Education</span><h1 class="welcome-title" id="welcomeTitle">PU MoneyMind</h1><p class="welcome-subtitle">Come learn, plan and grow your trading skills with us—one step at a time.</p><button class="welcome-enter" id="welcomeEnter" type="button">Come on in <span aria-hidden="true">→</span></button><small class="welcome-note">Learn before risking · Results are not guaranteed</small></div></section>
@@ -525,7 +539,7 @@
   <a class="skip" href="#main">Skip to main content</a>
   <header class="nav"><div class="wrap navin">
     <a class="brand" href="#top" aria-label="PU MoneyMind home"><img src="assets/logo-pu-moneymind-transparent.png" width="1536" height="1024" alt="PU MoneyMind logo"><span class="brand-crown-fx" aria-hidden="true"></span></a>
-    <nav class="navlinks" aria-label="Main navigation"><a href="#path">Learning path</a><a href="#proof">Experience</a><a href="#reviews">Reviews</a></nav>
+    <nav class="navlinks" aria-label="Page sections"><a href="#top">Home</a><a href="#risk-check">Lot calculator</a><a href="#about">About PU MoneyMind</a><a href="#fit-quiz-section">Find your path</a><a href="#tools">Trading tools</a><a href="#timeframe-quiz">Trading style quiz</a><a href="#path">Programs</a><a href="#tmc-packages">TMC packages</a><a href="#proof">Learning experience</a><a href="#student-story">Student story</a><a href="#reviews">Student reviews</a></nav>
     <nav class="lang-switch" aria-label="Language selection"><a href="index.html" lang="th">TH</a><a href="en.html" lang="en" aria-current="page">EN</a></nav>
     <a class="btn gold-cta track" data-cta="nav-consult" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer" aria-label="Get trading guidance now via LINE OA"><span>Get trading guidance now</span><span class="cta-arrow" aria-hidden="true">→</span></a>
   </div></header>
