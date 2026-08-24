@@ -519,16 +519,18 @@
   </style>
   <style>
     /* Complete section navigation: a calm primary row with a scrollable section rail. */
-    html{scroll-padding-top:182px}
-    .navin{height:auto;min-height:78px;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections";column-gap:18px;row-gap:8px;padding:8px 0 10px}
+    html{scroll-padding-top:98px}
+    .nav>.navin{width:min(1500px,calc(100% - 36px))}
+    .navin{height:auto;min-height:88px;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-areas:"brand sections language cta";column-gap:16px;row-gap:0;padding:8px 0}
     .navin>.brand{grid-area:brand;align-self:center}
     .navin>.lang-switch{grid-area:language;justify-self:end;align-self:center}
     .navin>.gold-cta{grid-area:cta;align-self:center}
-    .navlinks{grid-area:sections;display:flex;width:100%;gap:8px;padding:2px 2px 4px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:rgba(198,168,109,.5) transparent}
+    .navlinks{grid-area:sections;display:flex;justify-content:center;width:100%;gap:7px;padding:2px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:none}
+    .navlinks::-webkit-scrollbar{display:none}
     .navlinks::-webkit-scrollbar{height:4px}.navlinks::-webkit-scrollbar-track{background:transparent}.navlinks::-webkit-scrollbar-thumb{border-radius:99px;background:rgba(198,168,109,.48)}
-    .navlinks a{flex:0 0 auto;scroll-snap-align:start;padding:8px 13px;border:1px solid rgba(231,221,251,.15);border-radius:999px;background:rgba(255,255,255,.035);color:#d9d2e3;font-size:.82rem;line-height:1.2;white-space:nowrap;transition:color .2s,border-color .2s,background .2s,transform .2s}
+    .navlinks a{flex:0 0 auto;scroll-snap-align:start;padding:8px 11px;border:1px solid rgba(231,221,251,.15);border-radius:999px;background:rgba(255,255,255,.035);color:#d9d2e3;font-size:.78rem;line-height:1.2;white-space:nowrap;transition:color .2s,border-color .2s,background .2s,transform .2s}
     .navlinks a:hover,.navlinks a:focus-visible{color:#fff5d6;border-color:rgba(211,177,94,.58);background:linear-gradient(135deg,rgba(113,76,33,.62),rgba(83,55,113,.48));transform:translateY(-1px);outline:none}
-    @media(max-width:900px){html{scroll-padding-top:182px}.navlinks{display:flex}.navin{grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections"}.navin>.gold-cta{display:inline-flex}}
+    @media(max-width:1100px){html{scroll-padding-top:182px}.nav>.navin{width:min(var(--max),calc(100% - 36px))}.navlinks{display:flex;justify-content:flex-start}.navin{grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections";row-gap:8px;padding-bottom:10px}.navin>.gold-cta{display:inline-flex}}
     @media(max-width:620px){html{scroll-padding-top:158px}.navin{grid-template-columns:1fr auto;grid-template-areas:"brand language" "sections sections";padding-bottom:8px}.navin>.gold-cta{display:none}.navlinks{margin-inline:0}.navlinks a{padding:8px 12px;font-size:.78rem}}
   </style>
 </head>
