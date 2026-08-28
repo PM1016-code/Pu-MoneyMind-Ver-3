@@ -541,6 +541,25 @@
     @media(max-width:1100px){html{scroll-padding-top:182px}.nav>.navin{width:min(var(--max),calc(100% - 36px))}.navlinks{display:flex;justify-content:flex-start}.navin{grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections";row-gap:8px;padding-bottom:10px}.navin>.gold-cta{display:inline-flex}}
     @media(max-width:620px){html{scroll-padding-top:158px}.navin{grid-template-columns:1fr auto;grid-template-areas:"brand language" "sections sections";padding-bottom:8px}.navin>.gold-cta{display:none}.navlinks{margin-inline:0}.navlinks a{padding:8px 12px;font-size:.78rem}}
   </style>
+<style>
+#path .program-copy{display:flex;flex-direction:column;padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-radius:24px;min-width:0}
+#path .program-copy{background:#fff;border-color:#e7ddfb}
+#path .program-copy .chip{align-self:flex-start;color:#7058a9}
+#path .program-copy h3{font-size:clamp(1.4rem,2vw,1.8rem);line-height:1.4;margin:20px 0 14px}
+#path .program-copy h4{font-size:1.2rem;line-height:1.65;font-weight:400;margin:0 0 18px;color:var(--text)}
+#path .program-copy p{font-size:1.05rem;line-height:1.85;margin:0 0 18px;color:var(--muted)}
+#path .program-copy strong{font-weight:400;color:#282032}
+#path .program-copy h4{color:#282032}
+#path .program-copy p{color:#655e70}
+#path .program-copy .price{color:#7058a9}
+#path .program-copy .price s{color:#766f82!important}
+#path .program-copy .program-highlight{padding:14px 18px;border-left:2px solid #c5a76e;background:rgba(197,167,110,.07);border-radius:0 12px 12px 0}
+#path .program-copy ul{margin:0 0 24px;line-height:1.8}
+#path .program-copy li{margin-bottom:8px}
+#path .program-footer{margin-top:auto;padding-top:12px}
+#path .program-footer .btn{width:100%;text-align:center;white-space:normal;line-height:1.6}
+#path .program-footer .price{margin:0 0 20px}
+</style>
 </head>
 <body class="welcome-open">
   <section class="welcome-gate" id="welcomeGate" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><nav class="welcome-lang" aria-label="Change language"><a href="index.html" lang="th">TH</a><a href="en.html" lang="en" aria-current="page">EN</a></nav><span class="welcome-door left" aria-hidden="true"></span><span class="welcome-door right" aria-hidden="true"></span><div class="welcome-content"><div class="welcome-logo-stage"><img class="welcome-logo" src="assets/logo-pu-moneymind-transparent.png" width="1536" height="1024" alt="PU MoneyMind logo"><img class="welcome-crown" src="assets/logo-crown-effect.png" width="256" height="210" alt="" aria-hidden="true"><span class="welcome-crown-glint" aria-hidden="true">✦</span></div><span class="welcome-kicker">Professional Trading Education</span><h1 class="welcome-title" id="welcomeTitle">PU MoneyMind</h1><p class="welcome-subtitle">Come learn, plan and grow your trading skills with us—one step at a time.</p><button class="welcome-enter" id="welcomeEnter" type="button">Come on in <span aria-hidden="true">→</span></button><small class="welcome-note">Learn before risking · Results are not guaranteed</small></div></section>
@@ -595,7 +614,19 @@
 })();
 </script>
 
-<section class="soft" id="path"><div class="wrap"><div class="heading"><span class="eyebrow" style="color:#7058a9">Learning path</span><h2>No rush—learn at a pace that works for you</h2><p>Start with the level and goals you have today. Build a solid foundation first, then move forward when you feel ready.</p></div><div class="programs"><article class="card" style="background:#fff;border:1px solid #e7ddfb;border-radius:24px"><span class="chip" style="color:#7058a9">FOUNDATION → INTERMEDIATE</span><h3>Master Class 2026</h3><p class="muted">For beginners or traders who still lack structure. Learn mindset, Technical Mean Reversion, trade setups and practical application.</p><ul><li>More than 30 recorded lessons with 1-year access</li><li>Weekly Live and special classes according to schedule</li><li>Daily Gold Plan and Community access according to the program</li><li>Eligibility to register for an onsite class within one year, subject to available sessions</li></ul><div class="price" style="color:#7058a9"><s style="font-size:1rem;color:#766f82">THB 14,900</s> THB 8,900<small>Confirm the promotion end date and terms before payment</small></div><a class="btn program-deep track" data-cta="masterclass" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">Join Master Class</a></article><article class="card" style="background:#fff;border:1px solid #e7ddfb;border-radius:24px"><span class="chip" style="color:#7058a9">ADVANCED COACHING</span><h3>TMC — Tools Mastery Coaching</h3><p class="muted">For traders with foundational knowledge who are ready for consistent practice, focusing on GSS/TTS, assignments, statistics and coaching feedback.</p><ul><li>LV1 Foundation</li><li>LV2 Gold Swing Strategy</li><li>LV3 Trade Statistics</li><li>Live Coaching and feedback according to package scope</li></ul><p class="small">Confirm with the team whether GSS/TTS is included or charged separately before payment.</p><a class="btn program-deep tmc-plan-champagne" href="#tmc-packages">Plan your TMC system</a></article></div></div></section>
+<section class="soft" id="path"><div class="wrap"><div class="heading"><span class="eyebrow" style="color:#7058a9">Learning path</span><h2>No rush—learn at a pace that works for you</h2><p>Start with the level and goals you have today. Build a solid foundation first, then move forward when you feel ready.</p></div><div class="programs"><article class="card program-copy"><span class="chip">FOUNDATION → INTERMEDIATE</span><h3>Master Class 2026</h3><h4>Knowing more techniques does not mean you trade with a system</h4>
+<p>If you still trade on instinct, keep switching setups, or open a chart without knowing where to start your analysis…</p>
+<p><strong>Master Class 2026</strong> helps organise what you know into a clearer trading process—from reading the market and planning to finding setups and putting your learning into practice.</p>
+<p class="program-highlight"><strong>From “looking for an entry”<br>to “knowing what you are waiting for”</strong></p>
+<ul><li>30+ recorded lessons with 1-year access</li><li>Weekly Live + Daily Gold Plan</li><li>Community &amp; Special Class</li><li>Eligibility to attend On-site Classes, subject to available sessions</li></ul>
+<div class="program-footer"><div class="price"><s style="font-size:1rem;color:var(--muted)">THB 14,900</s> <strong>THB 8,900</strong><small>Confirm the promotion end date and terms before payment</small></div><a class="btn program-deep track" data-cta="masterclass" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">Start building your trading system →</a></div></article>
+<article class="card program-copy"><span class="chip">ADVANCED COACHING</span><h3>TMC — TOOLS MASTERY COACHING</h3><h4>Progress takes more than simply learning more</h4>
+<p>If you have the foundations but keep facing the same problems:<br><strong>Inconsistent setups • Unclear mistakes • Not knowing which approach fits you</strong></p>
+<p>TMC guides you through more focused practice with <strong>GSS/TTS + assignments + Trade Statistics + Coaching Feedback</strong>.</p>
+<p>So you do not just “know how to trade”—you start to see <strong>what to repeat and what to stop doing</strong>.</p>
+<p class="program-highlight"><strong>PRACTICE → DATA → FEEDBACK → REFINE</strong></p>
+<ul><li>Practise using GSS/TTS systematically</li><li>Analyse your trading with your own statistics</li><li>Live Coaching &amp; Feedback</li><li>Develop from the trades you actually take</li></ul>
+<div class="program-footer"><a class="btn program-deep tmc-plan-champagne" href="#tmc-packages">Ready to take your practice further? →</a></div></article></div></div></section>
 
 <section id="tmc-packages"><div class="wrap"><div class="heading"><span class="eyebrow">TMC packages</span><h2>Pick a package that fits the time you can give it</h2></div><div class="packages"><article class="card panel"><span class="chip">FOCUS 4 MONTHS</span><h3>Build foundations and practise the process</h3><ul><li>TMC content based on the current curriculum</li><li>Tool application and plan development</li><li>Statistics collection and analysis</li><li>Four months of scheduled Coaching</li></ul><div class="price">US$658<small>Average US$164.50/month · possible fees not included</small></div><a class="btn alt track" data-cta="tmc-4m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">4-month package</a></article><article class="card panel featured"><span class="chip" style="color:var(--yellow)">FOCUS 12 MONTHS</span><h3>More time to practise, review and refine your system</h3><ul><li>Core benefits of the 4-month package</li><li>Twelve months of scheduled Coaching</li><li>Review statistics and areas for improvement</li><li>More time for repeated practice than the shorter package</li></ul><div class="price">US$1,649<small>Average US$137.42/month · approximately US$27.08/month below the 4-month rate</small></div><a class="btn track" data-cta="tmc-12m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">12-month package</a></article></div></div></section>
 

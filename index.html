@@ -552,6 +552,25 @@
     @media(max-width:1100px){html{scroll-padding-top:182px}.nav>.navin{width:min(var(--max),calc(100% - 36px))}.navlinks{display:flex;justify-content:flex-start}.navin{grid-template-columns:auto 1fr auto;grid-template-areas:"brand language cta" "sections sections sections";row-gap:8px;padding-bottom:10px}.navin>.gold-cta{display:inline-flex}}
     @media(max-width:620px){html{scroll-padding-top:158px}.navin{grid-template-columns:1fr auto;grid-template-areas:"brand language" "sections sections";padding-bottom:8px}.navin>.gold-cta{display:none}.navlinks{margin-inline:0}.navlinks a{padding:8px 12px;font-size:.78rem}}
   </style>
+<style>
+#path .program-copy{display:flex;flex-direction:column;padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-radius:24px;min-width:0}
+#path .program-copy{background:#fff;border-color:#e7ddfb}
+#path .program-copy .chip{align-self:flex-start;color:#7058a9}
+#path .program-copy h3{font-size:clamp(1.4rem,2vw,1.8rem);line-height:1.4;margin:20px 0 14px}
+#path .program-copy h4{font-size:1.2rem;line-height:1.65;font-weight:400;margin:0 0 18px;color:var(--text)}
+#path .program-copy p{font-size:1.05rem;line-height:1.85;margin:0 0 18px;color:var(--muted)}
+#path .program-copy strong{font-weight:400;color:#282032}
+#path .program-copy h4{color:#282032}
+#path .program-copy p{color:#655e70}
+#path .program-copy .price{color:#7058a9}
+#path .program-copy .price s{color:#766f82!important}
+#path .program-copy .program-highlight{padding:14px 18px;border-left:2px solid #c5a76e;background:rgba(197,167,110,.07);border-radius:0 12px 12px 0}
+#path .program-copy ul{margin:0 0 24px;line-height:1.8}
+#path .program-copy li{margin-bottom:8px}
+#path .program-footer{margin-top:auto;padding-top:12px}
+#path .program-footer .btn{width:100%;text-align:center;white-space:normal;line-height:1.6}
+#path .program-footer .price{margin:0 0 20px}
+</style>
 </head>
 <body class="welcome-open">
   <section class="welcome-gate" id="welcomeGate" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><nav class="welcome-lang" aria-label="เปลี่ยนภาษา"><a href="index.html" lang="th" aria-current="page">TH</a><a href="en.html" lang="en">EN</a></nav><span class="welcome-door left" aria-hidden="true"></span><span class="welcome-door right" aria-hidden="true"></span><div class="welcome-content"><div class="welcome-logo-stage"><img class="welcome-logo" src="assets/logo-pu-moneymind-transparent.png" width="1536" height="1024" alt="โลโก้ PU MoneyMind"><img class="welcome-crown" src="assets/logo-crown-effect.png" width="256" height="210" alt="" aria-hidden="true"><span class="welcome-crown-glint" aria-hidden="true">✦</span></div><span class="welcome-kicker">Professional Trading Education</span><h1 class="welcome-title" id="welcomeTitle">PU MoneyMind</h1><p class="welcome-subtitle">เข้ามาเรียนรู้ วางแผน และค่อย ๆ พัฒนาการเทรดไปด้วยกันนะ</p><button class="welcome-enter" id="welcomeEnter" type="button">เข้ามาดูกันเลย <span aria-hidden="true">→</span></button><small class="welcome-note">เรียนรู้ก่อนเสี่ยง · ไม่มีการรับประกันผลลัพธ์</small></div></section>
@@ -606,7 +625,20 @@
     })();
     </script>
 
-    <section class="soft" id="path"><div class="wrap"><div class="heading"><span class="eyebrow" style="color:#7058a9">Learning path</span><h2>ไม่ต้องรีบ เลือกเรียนให้พอดีกับจังหวะของคุณ</h2><p>ลองเลือกจากพื้นฐานและเป้าหมายที่มีตอนนี้ก่อน ค่อย ๆ สร้างฐานให้แน่น แล้วค่อยต่อยอดในวันที่พร้อม</p></div><div class="programs"><article class="card" style="background:#fff;border:1px solid #e7ddfb;border-radius:24px"><span class="chip" style="color:#7058a9">FOUNDATION → INTERMEDIATE</span><h3>Master Class 2026</h3><p class="muted">สำหรับมือใหม่หรือผู้ที่เคยเทรดแต่ยังขาดโครงสร้าง เรียนตั้งแต่ Mindset, Technical Mean Reverse, Trade Setup และการฝึกใช้งาน</p><ul><li>วิดีโอย้อนหลังมากกว่า 30 บทเรียน ดูได้ 1 ปี</li><li>Weekly Live และคลาสพิเศษตามตาราง</li><li>Daily Gold Plan และ Community ตามสิทธิ์โปรแกรม</li><li>สิทธิ์ลงทะเบียนคลาสสถานที่ภายใน 1 ปี ตามรอบที่เปิด</li></ul><div class="price" style="color:#7058a9"><s style="font-size:1rem;color:#766f82">14,900 บาท</s> 8,900 บาท<small>โปรดสอบถามวันสิ้นสุดโปรโมชันและเงื่อนไขก่อนชำระเงิน</small></div><a class="btn program-deep track" data-cta="masterclass" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">ลงเรียน Master Class</a></article><article class="card" style="background:#fff;border:1px solid #e7ddfb;border-radius:24px"><span class="chip" style="color:#7058a9">ADVANCED COACHING</span><h3>TMC — Tools Mastery Coaching</h3><p class="muted">สำหรับผู้ที่มีพื้นฐานและพร้อมฝึกอย่างต่อเนื่อง เน้นการใช้ GSS/TTS การบ้าน การเก็บสถิติ และ Feedback จาก Coaching</p><ul><li>LV1 Foundation</li><li>LV2 Gold Swing Strategy</li><li>LV3 Trade Statistics</li><li>Live Coaching และ Feedback ตามขอบเขตแพ็กเกจ</li></ul><p class="small">กรุณายืนยันกับทีมงานว่า GSS/TTS รวมอยู่ในแพ็กเกจหรือมีค่าใช้จ่ายแยก ก่อนชำระเงิน</p><a class="btn program-deep tmc-plan-champagne" href="#tmc-packages">วางแผนระบบ TMC</a></article></div></div></section>
+    <section class="soft" id="path"><div class="wrap"><div class="heading"><span class="eyebrow" style="color:#7058a9">Learning path</span><h2>ไม่ต้องรีบ เลือกเรียนให้พอดีกับจังหวะของคุณ</h2><p>ลองเลือกจากพื้นฐานและเป้าหมายที่มีตอนนี้ก่อน ค่อย ๆ สร้างฐานให้แน่น แล้วค่อยต่อยอดในวันที่พร้อม</p></div><div class="programs"><article class="card program-copy"><span class="chip">FOUNDATION → INTERMEDIATE</span>
+<h3>Master Class 2026</h3><h4>รู้เทคนิคเยอะ…ไม่ได้แปลว่าจะเทรดเป็นระบบ</h4>
+<p>ถ้าคุณยังเข้าเทรดตามความรู้สึก<br>เปลี่ยน Setup ไปเรื่อย หรือเปิดกราฟแล้วไม่รู้ว่าควรเริ่มวิเคราะห์จากตรงไหน</p>
+<p><strong>Master Class 2026</strong> จะช่วยจัดสิ่งที่คุณรู้ให้กลายเป็น “กระบวนการเทรด” ที่ชัดขึ้น ตั้งแต่การอ่านตลาด วางแผน หา Setup ไปจนถึงการฝึกใช้งานจริง</p>
+<p class="program-highlight"><strong>จากคนที่ “พยายามหา Entry”<br>สู่คนที่ “รู้ว่ากำลังรออะไร”</strong></p>
+<ul><li>30+ บทเรียน ดูย้อนหลังได้ 1 ปี</li><li>Weekly Live + Daily Gold Plan</li><li>Community &amp; Special Class</li><li>สิทธิ์เข้าร่วม On-site Class ตามรอบที่เปิด</li></ul>
+<div class="program-footer"><div class="price"><s style="font-size:1rem;color:var(--muted)">14,900 บาท</s> <strong>8,900 บาท</strong><small>โปรดสอบถามวันสิ้นสุดโปรโมชันและเงื่อนไขก่อนชำระเงิน</small></div><a class="btn program-deep track" data-cta="masterclass" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">เริ่มสร้างระบบการเทรดของคุณ →</a></div></article>
+<article class="card program-copy"><span class="chip">ADVANCED COACHING</span><h3>TMC — TOOLS MASTERY COACHING</h3><h4>เพราะการพัฒนา ไม่ได้เกิดจากการเรียนเพิ่มอย่างเดียว</h4>
+<p>ถ้าคุณมีพื้นฐานแล้ว แต่ยังเจอปัญหาเดิมซ้ำ ๆ<br><strong>Setup ไม่นิ่ง • ไม่รู้ว่าพลาดตรงไหน • ไม่รู้ว่าวิธีไหนเหมาะกับตัวเอง</strong></p>
+<p>TMC จะพาคุณเข้าสู่กระบวนการฝึกที่จริงจังขึ้น ผ่าน <strong>GSS/TTS + การบ้าน + Trade Statistics + Coaching Feedback</strong></p>
+<p>เพื่อให้คุณไม่ได้แค่ “รู้วิธีเทรด”<br>แต่เริ่มมองเห็นว่า <strong>อะไรควรทำซ้ำ และอะไรควรหยุดทำ</strong></p>
+<p class="program-highlight"><strong>PRACTICE → DATA → FEEDBACK → REFINE</strong></p>
+<ul><li>ฝึกใช้ GSS/TTS อย่างเป็นระบบ</li><li>วิเคราะห์การเทรดจาก Statistics ของตัวเอง</li><li>Live Coaching &amp; Feedback</li><li>พัฒนาจากสิ่งที่คุณเทรดจริง</li></ul>
+<div class="program-footer"><a class="btn program-deep tmc-plan-champagne" href="#tmc-packages">พร้อมยกระดับการฝึกของคุณ →</a></div></article></div></div></section>
 
 <section id="tmc-packages"><div class="wrap"><div class="heading"><span class="eyebrow">TMC packages</span><h2>เลือกแพ็กเกจให้เข้ากับเวลาที่คุณมี</h2></div><div class="packages"><article class="card panel"><span class="chip">FOCUS 4 MONTHS</span><h3>เริ่มวางรากฐานและฝึกตามกระบวนการ</h3><ul><li>เนื้อหา TMC ตาม Curriculum ปัจจุบัน</li><li>การใช้เครื่องมือและการสร้างแผน</li><li>การเก็บและวิเคราะห์สถิติ</li><li>Coaching ตลอด 4 เดือน ตามตาราง</li></ul><div class="price">US$658<small>เฉลี่ย US$164.50/เดือน · ยังไม่รวมค่าธรรมเนียมที่อาจเกิดขึ้น</small></div><a class="btn alt track" data-cta="tmc-4m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">แพ็กเกจ 4 เดือน</a></article><article class="card panel featured"><span class="chip" style="color:var(--yellow)">FOCUS 12 MONTHS</span><h3>เพิ่มเวลาเพื่อฝึก ทบทวน และปรับระบบ</h3><ul><li>สิทธิ์พื้นฐานตามแพ็กเกจ 4 เดือน</li><li>Coaching ต่อเนื่อง 12 เดือน ตามตาราง</li><li>ทบทวนสถิติและจุดที่ควรพัฒนา</li><li>มีเวลาฝึกซ้ำมากกว่าแพ็กเกจระยะสั้น</li></ul><div class="price">US$1,649<small>เฉลี่ย US$137.42/เดือน · ต่างจากอัตรา 4 เดือนประมาณ US$27.08/เดือน</small></div><a class="btn track" data-cta="tmc-12m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">แพ็กเกจ 12 เดือน</a></article></div></div></section>
 
