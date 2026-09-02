@@ -549,7 +549,7 @@
 #path .program-footer .price{margin:0 0 20px}
 </style>
   <script>
-  (()=>{const raw=new URLSearchParams(location.search).get('page');const page=/^[1-5]$/.test(raw||'')?raw:'1';document.documentElement.dataset.currentPage=page;window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-nav-page]').forEach(link=>{if(link.dataset.navPage===page)link.setAttribute('aria-current','page')});document.querySelectorAll('a[lang="th"]').forEach(link=>link.href='index.html?page='+page);document.querySelectorAll('a[lang="en"]').forEach(link=>link.href='en.html?page='+page);if(page!=='1'){document.getElementById('welcomeGate')?.remove();document.body.classList.remove('welcome-open')}})})();
+  (()=>{const raw=new URLSearchParams(location.search).get('page');const page=/^[1-5]$/.test(raw||'')?raw:'1';document.documentElement.dataset.currentPage=page;window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-nav-page]').forEach(link=>{if(link.dataset.navPage===page)link.setAttribute('aria-current','page')});document.querySelectorAll('a[lang="th"]').forEach(link=>link.href='index.html?page='+page);document.querySelectorAll('a[lang="en"]').forEach(link=>link.href='en.html?page='+page);const reviews=document.getElementById('reviews');const risk=document.getElementById('risk-check');if(reviews&&risk){reviews.dataset.page='1';risk.insertAdjacentElement('afterend',reviews)}if(page!=='1'){document.getElementById('welcomeGate')?.remove();document.body.classList.remove('welcome-open')}})})();
   </script>
   <style>
   html[data-current-page] main>[data-page]{display:none}
@@ -565,7 +565,7 @@
   <a class="skip" href="#main">Skip to main content</a>
   <header class="nav"><div class="wrap navin">
     <a class="brand" href="en.html?page=1#top" aria-label="PU MoneyMind home"><img src="assets/logo-pu-moneymind-transparent.png" width="1536" height="1024" alt="PU MoneyMind logo"><span class="brand-crown-fx" aria-hidden="true"></span></a>
-    <nav class="navlinks" aria-label="Go to each page"><a data-nav-page="1" href="en.html?page=1">Start here</a><a data-nav-page="2" href="en.html?page=2">About Pu</a><a data-nav-page="3" href="en.html?page=3">Tools &amp; TMC</a><a data-nav-page="4" href="en.html?page=4">Quiz &amp; Programs</a><a data-nav-page="5" href="en.html?page=5">Stories &amp; Reviews</a></nav>
+    <nav class="navlinks" aria-label="Go to each page"><a data-nav-page="1" href="en.html?page=1">Start here</a><a data-nav-page="2" href="en.html?page=2">About Pu</a><a data-nav-page="3" href="en.html?page=3">Tools &amp; TMC</a><a data-nav-page="4" href="en.html?page=4">Quiz &amp; Programs</a><a data-nav-page="5" href="en.html?page=5">Learning &amp; Stories</a></nav>
     <nav class="lang-switch" aria-label="Language selection"><a href="index.html" lang="th">TH</a><a href="en.html" lang="en" aria-current="page">EN</a></nav>
     <a class="btn gold-cta track" data-cta="nav-consult" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer" aria-label="Get trading guidance now via LINE OA"><span>Get trading guidance now</span><span class="cta-arrow" aria-hidden="true">→</span></a>
   </div></header>
