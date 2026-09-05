@@ -589,14 +589,55 @@
     @media(max-width:520px){#timeframe-quiz::before{width:240px;height:240px}#timeframe-quiz .tf-score-guide{gap:7px;padding:15px 10px}#timeframe-quiz .tf-score-guide b{width:42px;height:42px}#timeframe-quiz .tf-score-guide span{font-size:.72rem}}
     #timeframe-quiz .tf-result-head{align-items:center;padding:20px 24px;border:1px solid rgba(66,22,116,.14);border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(249,242,252,.96));box-shadow:0 12px 30px rgba(66,22,116,.07)}#timeframe-quiz .tf-result-head .eyebrow{font-size:.74rem;letter-spacing:.11em}#timeframe-quiz .tf-result-head h3{max-width:760px;margin-top:8px;font-size:clamp(1.45rem,3.2vw,2.35rem);line-height:1.28}#timeframe-quiz .tf-score{flex:0 0 auto;padding:8px 13px;border:1px solid rgba(66,22,116,.14);border-radius:999px;background:#fff;color:#654b73;font-size:.82rem;white-space:nowrap}#timeframe-quiz .tf-result-grid{margin-top:20px}#timeframe-quiz .tf-result-visual-shell{width:100%;max-width:980px}#timeframe-quiz .tf-route{max-width:980px;margin:24px auto 0;padding:24px 26px}#timeframe-quiz .tf-route h4{max-width:760px;font-size:clamp(1.2rem,2.2vw,1.65rem);line-height:1.42}#timeframe-quiz .tf-route>p{max-width:850px;line-height:1.7}#timeframe-quiz .tf-route-card{padding:18px 19px}#timeframe-quiz .tf-route-card b{font-size:1rem;line-height:1.45}#timeframe-quiz .tf-route-card p{line-height:1.65}#timeframe-quiz .tf-closing{max-width:760px;margin:22px auto 0;line-height:1.65}@media(max-width:720px){#timeframe-quiz .tf-result-head{gap:9px;padding:16px 17px}#timeframe-quiz .tf-result-head h3{font-size:clamp(1.28rem,5.8vw,1.65rem)}#timeframe-quiz .tf-score{padding:6px 11px;font-size:.76rem}#timeframe-quiz .tf-result-grid{margin-top:14px}#timeframe-quiz .tf-route{margin-top:18px;padding:19px 17px}#timeframe-quiz .tf-route-options{gap:10px;margin-top:14px}#timeframe-quiz .tf-route-card{padding:16px}#timeframe-quiz .tf-closing{font-size:.94rem}}
     #timeframe-quiz .tf-result-showcase{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);min-height:500px;overflow:hidden;border:1px solid rgba(66,22,116,.14);border-radius:28px;background:#fffaf8;box-shadow:0 22px 54px rgba(66,22,116,.12)}#timeframe-quiz .tf-character-pane{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:clamp(22px,3vw,36px);background:linear-gradient(145deg,#f8f0fb,#fffaf8)}#timeframe-quiz .tf-character-art{position:relative;width:100%;height:clamp(290px,34vw,430px);overflow:hidden;border-radius:22px;background:#f4eafb}#timeframe-quiz .tf-character-art img{position:absolute;top:-15%;left:-103%;width:205%;max-width:none;height:auto}#timeframe-quiz .tf-character-name{display:block;margin-top:18px;color:#d2a943;font-size:clamp(1.35rem,2.6vw,2rem);font-weight:500;line-height:1.25}#timeframe-quiz .tf-character-summary{max-width:460px;margin:9px 0 0;color:#5f4d69;font-size:clamp(.98rem,1.4vw,1.1rem);line-height:1.7}#timeframe-quiz .tf-fit-pane{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:clamp(30px,4vw,56px)}#timeframe-quiz .tf-fit-pane .eyebrow{margin-bottom:10px;color:#9a6aac}#timeframe-quiz .tf-fit-pane h4{margin:0;color:#421674;font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.2}#timeframe-quiz .tf-fit-list{display:grid;gap:14px;margin:28px 0 0;padding:0;list-style:none}#timeframe-quiz .tf-fit-list li{position:relative;padding-left:25px;color:#4f3d58;font-size:clamp(1rem,1.5vw,1.14rem);line-height:1.65}#timeframe-quiz .tf-fit-list li::before{content:"";position:absolute;top:.66em;left:0;width:9px;height:9px;border-radius:50%;background:#d7ae47;box-shadow:0 0 0 5px rgba(215,174,71,.13)}#timeframe-quiz .tf-fit-warning{margin-top:28px;padding:18px 20px;border-left:3px solid #d7ae47;border-radius:0 14px 14px 0;background:#f5ecfa}#timeframe-quiz .tf-fit-warning b{color:#421674}#timeframe-quiz .tf-fit-warning p{margin:5px 0 0;color:#675773;line-height:1.65}@media(max-width:800px){#timeframe-quiz .tf-result-showcase{grid-template-columns:1fr}.tf-character-pane{padding-bottom:26px}#timeframe-quiz .tf-character-art{height:clamp(280px,78vw,430px)}#timeframe-quiz .tf-fit-pane{padding:26px 22px 30px}#timeframe-quiz .tf-fit-list{margin-top:20px}}
+    /* Site-wide typography and spacing balance */
+    body{font-size:clamp(1rem,.25vw + .94rem,1.08rem)}
+    section{padding:clamp(52px,5.2vw,76px) 0}
+    .heading{max-width:760px;margin-bottom:clamp(26px,3vw,34px)}
+    .heading h2{margin:10px 0 12px;font-size:clamp(2rem,3.45vw,3.55rem);line-height:1.16;letter-spacing:-.025em}
+    .heading p,.lead{font-size:clamp(1rem,.65vw + .82rem,1.12rem);line-height:1.65}
+    .eyebrow{font-size:clamp(.76rem,.18vw + .72rem,.84rem)}
+    .grid2,.tools,.programs,.packages,.proofgrid{gap:clamp(16px,1.8vw,22px)}
+    .card,.audience,.risk,.step{padding:clamp(21px,2.2vw,28px)}
+    .card h3,.audience h3{font-size:clamp(1.4rem,1.7vw,1.75rem);line-height:1.3}
+    .card p,.belief,.checklist li,.step p,.risk p{font-size:clamp(.98rem,.26vw + .92rem,1.06rem);line-height:1.62}
+    .story{gap:clamp(28px,3.2vw,42px)}
+    .story>img{height:clamp(430px,48vw,590px)}
+    .beliefs{gap:10px;margin-top:20px}.belief{padding:15px 17px}
+    .proofbar{margin-bottom:28px}.proofitem{padding:17px 19px}.source-note{margin-bottom:38px}
+    .experience{gap:14px;padding-bottom:13px}.experience-slide{height:clamp(300px,29vw,390px)}
+    .review-stage{min-height:clamp(470px,48vw,580px);padding:clamp(18px,2vw,26px)}
+    .review-stage img{height:clamp(400px,43vw,510px)}
+    .review-context{margin-top:14px;padding:14px 17px}
+    .risk-form,.risk-result{padding:clamp(21px,2.3vw,28px)}
+    .risk-metric{padding:14px}.risk-guide{margin-top:13px;padding:15px}.risk-analysis{padding:21px 24px}
+    .cta{padding:clamp(44px,5vw,60px) clamp(18px,3vw,28px)}
+    .cta h2{font-size:clamp(2.05rem,4vw,4rem);line-height:1.15}
+    footer{padding:34px 0}
+    @media(max-width:900px){section{padding:clamp(48px,7vw,62px) 0}.story{gap:26px}.story>img{height:clamp(400px,62vw,510px)}.review-stage{min-height:470px}}
+    @media(max-width:560px){body{font-size:1rem}section{padding:46px 0}.heading{margin-bottom:24px}.heading h2{font-size:clamp(1.8rem,8.2vw,2.55rem);line-height:1.2}.heading p,.lead{font-size:1rem}.card,.audience,.risk,.step{padding:19px}.story{gap:22px}.story>img{width:min(92%,360px);height:min(430px,60vh)}.proofitem{padding:14px}.review-stage{min-height:385px;padding:13px}.review-stage img{height:330px}.cta{padding:40px 17px}footer{padding:28px 0}}
     /* Transparent quiz character cutouts */
-    #timeframe-quiz .tf-result-showcase{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);min-height:510px}
-    #timeframe-quiz .tf-character-pane{align-items:center;padding:clamp(24px,3vw,40px);text-align:center;background:radial-gradient(circle at 50% 42%,rgba(225,207,244,.55),transparent 58%),linear-gradient(145deg,#fbf6fd,#fffaf8)}
-    #timeframe-quiz .tf-character-art{display:grid;place-items:center;width:100%;height:clamp(330px,36vw,470px);overflow:visible;border-radius:0;background:transparent}
-    #timeframe-quiz .tf-character-art img{position:static;display:block;width:auto;height:auto;max-width:92%;max-height:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 20px 24px rgba(66,22,116,.17))}
-    #timeframe-quiz .tf-character-name{margin-top:12px}
-    #timeframe-quiz .tf-character-summary{max-width:440px;margin:8px auto 0}
-    @media(max-width:800px){#timeframe-quiz .tf-result-showcase{grid-template-columns:1fr}#timeframe-quiz .tf-character-pane{padding:24px 20px 28px}#timeframe-quiz .tf-character-art{height:clamp(280px,76vw,400px)}#timeframe-quiz .tf-character-art img{max-width:88%;max-height:96%}}
+    #timeframe-quiz .tf-result-head{gap:12px;padding:17px 20px}
+    #timeframe-quiz .tf-result-head h3{margin-top:5px;font-size:clamp(1.4rem,2.7vw,2.05rem);line-height:1.25}
+    #timeframe-quiz .tf-score{padding:7px 12px;font-size:.86rem}
+    #timeframe-quiz .tf-result-grid{margin-top:16px}
+    #timeframe-quiz .tf-result-showcase{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);min-height:0}
+    #timeframe-quiz .tf-character-pane{align-items:center;padding:clamp(20px,2.4vw,30px);text-align:center;background:radial-gradient(circle at 50% 42%,rgba(225,207,244,.55),transparent 58%),linear-gradient(145deg,#fbf6fd,#fffaf8)}
+    #timeframe-quiz .tf-character-art{display:grid;place-items:center;width:100%;height:clamp(300px,30vw,390px);overflow:visible;border-radius:0;background:transparent}
+    #timeframe-quiz .tf-character-art img{position:static;display:block;width:auto;height:auto;max-width:94%;max-height:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 18px 22px rgba(66,22,116,.16))}
+    #timeframe-quiz .tf-character-name{margin-top:8px;font-size:clamp(1.4rem,2.1vw,1.8rem);line-height:1.25}
+    #timeframe-quiz .tf-character-summary{max-width:430px;margin:6px auto 0;font-size:clamp(1rem,1.25vw,1.08rem);line-height:1.58}
+    #timeframe-quiz .tf-fit-pane{padding:clamp(26px,3.2vw,42px)}
+    #timeframe-quiz .tf-fit-pane .eyebrow{margin-bottom:7px;font-size:.82rem}
+    #timeframe-quiz .tf-fit-pane h4{font-size:clamp(1.75rem,2.8vw,2.35rem)}
+    #timeframe-quiz .tf-fit-list{gap:10px;margin-top:20px}
+    #timeframe-quiz .tf-fit-list li{font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.55}
+    #timeframe-quiz .tf-fit-warning{margin-top:20px;padding:15px 18px}
+    #timeframe-quiz .tf-fit-warning p{line-height:1.55}
+    #timeframe-quiz .tf-route{margin-top:18px;padding:21px 23px}
+    #timeframe-quiz .tf-route-options{gap:10px;margin-top:14px}
+    #timeframe-quiz .tf-route-card{padding:16px 17px}
+    #timeframe-quiz .tf-closing{margin-top:17px;font-size:1rem;line-height:1.55}
+    @media(max-width:800px){#timeframe-quiz .tf-result-head{align-items:flex-start;padding:15px 16px}#timeframe-quiz .tf-result-head h3{font-size:clamp(1.3rem,5.8vw,1.65rem)}#timeframe-quiz .tf-result-showcase{grid-template-columns:1fr}#timeframe-quiz .tf-character-pane{padding:20px 17px 22px}#timeframe-quiz .tf-character-art{height:clamp(255px,70vw,330px)}#timeframe-quiz .tf-character-art img{max-width:90%;max-height:96%}#timeframe-quiz .tf-character-name{font-size:1.45rem}#timeframe-quiz .tf-character-summary{font-size:1rem}#timeframe-quiz .tf-fit-pane{padding:23px 19px 26px}#timeframe-quiz .tf-fit-pane h4{font-size:1.75rem}#timeframe-quiz .tf-route{padding:18px 16px}#timeframe-quiz .tf-route-card{padding:15px}}
   </style>
 </head>
 <body class="welcome-open">
