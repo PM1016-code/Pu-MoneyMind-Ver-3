@@ -37,8 +37,20 @@ main,section,.wrap,.grid2,.tools,.programs,.packages,.proofgrid{min-width:0}
 .risk-summary dt,.risk-summary dd{font-size:clamp(1.05rem,.3vw + 1rem,1.17rem)}
 .risk-summary div{padding:clamp(18px,1.6vw,23px) 0}
 .risk-level-badge{font-size:clamp(1rem,.24vw + .96rem,1.1rem)}
-@media(max-width:1320px){.navin{gap:10px}.navlinks{gap:7px}.navlinks a{padding:9px 13px}.navin>.gold-cta{padding-inline:17px}}
+/* Requested +3px readability lift for the three highlighted areas */
+.navlinks a{font-size:clamp(1.08rem,.18vw + 1.04rem,1.2rem)}
+.risk-field label{font-size:clamp(1.18rem,.24vw + 1.12rem,1.3rem)}
+.risk-field input,.risk-field select{font-size:clamp(1.18rem,.24vw + 1.13rem,1.31rem)}
+.risk-form .btn{font-size:clamp(1.17rem,.22vw + 1.12rem,1.29rem)}
+.risk-privacy,.risk-note{font-size:clamp(1.05rem,.18vw + 1rem,1.16rem)}
+.risk-lot-label{font-size:clamp(1.23rem,.26vw + 1.17rem,1.37rem)}
+.risk-summary dt,.risk-summary dd{font-size:clamp(1.2rem,.28vw + 1.14rem,1.34rem)}
+.risk-level-badge{font-size:clamp(1.15rem,.22vw + 1.1rem,1.27rem)}
+#timeframe-quiz .tf-start{min-height:58px;font-size:clamp(1.17rem,.25vw + 1.11rem,1.3rem)}
+.strategy-copy>span:not(.strategy-fit),.strategy-copy>span:not(.strategy-fit) strong{color:#fff}
+@media(max-width:1320px){.navin{gap:10px}.navlinks{gap:7px}.navlinks a{padding:9px 12px}.navin>.gold-cta{padding-inline:17px}}
 @media(max-width:1100px){.navin>.gold-cta{display:none}}
 @media(max-width:900px){.heading{max-width:860px}.welcome-content{transform:translateY(-3vh)}.welcome-title{font-size:clamp(3.25rem,10vw,5.6rem)}}
 @media(max-width:760px){.risk-form,.risk-result{height:auto;padding:23px}.risk-form{display:block}.risk-lot-main{margin:32px 0 22px}}
+@media(max-width:620px){.navlinks a{font-size:1rem;padding:9px 12px}.risk-field label{font-size:1.08rem}.risk-field input,.risk-field select{font-size:1.08rem}.risk-privacy,.risk-note{font-size:.98rem}#timeframe-quiz .tf-start{font-size:1.1rem}}
 @media(max-width:560px){.wrap{width:calc(100% - 28px)}body{font-size:1.03rem}.heading{max-width:100%}.heading p,.lead,.card p,.belief,.checklist li,.step p,.risk p,.cta p,.review-context{font-size:1.03rem}.welcome-content{width:calc(100% - 24px);padding:20px 10px;transform:translateY(-2vh)}.welcome-logo-stage{width:min(310px,78vw);margin-bottom:18px}.welcome-title{font-size:clamp(3rem,15vw,4.5rem)}.welcome-subtitle{max-width:390px;margin:16px auto 24px;font-size:1.08rem;line-height:1.58}.welcome-enter{width:min(100%,330px);min-height:58px;padding:14px 24px}.welcome-note{font-size:.84rem}.card,.audience,.risk,.step{padding:21px}}
