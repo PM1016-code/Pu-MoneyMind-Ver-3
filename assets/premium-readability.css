@@ -59,3 +59,12 @@ main,section,.wrap,.grid2,.tools,.programs,.packages,.proofgrid{min-width:0}
 @media(max-width:620px){.navlinks a{font-size:1rem;padding:9px 12px}.risk-field label{font-size:1.08rem}.risk-field input,.risk-field select{font-size:1.08rem}.risk-privacy,.risk-note{font-size:.98rem}#timeframe-quiz .tf-start{font-size:1.1rem}}
 @media(max-width:560px){#top .hero .hero-responsive-title{max-width:100%;font-size:clamp(2rem,9.2vw,2.75rem);line-height:1.24;letter-spacing:-.012em;text-wrap:pretty}#top .hero .hero-responsive-title .hero-title-break{display:none}#top .hero .hero-responsive-title .gradient::before{content:" ";white-space:normal}}
 @media(max-width:560px){.wrap{width:calc(100% - 28px)}body{font-size:1.03rem}.heading{max-width:100%}.heading p,.lead,.card p,.belief,.checklist li,.step p,.risk p,.cta p,.review-context{font-size:1.03rem}.welcome-content{width:calc(100% - 24px);padding:20px 10px;transform:translateY(-2vh)}.welcome-logo-stage{width:min(310px,78vw);margin-bottom:18px}.welcome-title{font-size:clamp(3rem,15vw,4.5rem)}.welcome-subtitle{max-width:390px;margin:16px auto 24px;font-size:1.08rem;line-height:1.58}.welcome-enter{width:min(100%,330px);min-height:58px;padding:14px 24px}.welcome-note{font-size:.84rem}.card,.audience,.risk,.step{padding:21px}}
+/* Requested removals */
+#top .proofbar,
+#top .source-note,
+#fit-quiz-section,
+#path .programs>.program-copy:nth-child(2){
+display:none!important;
+}
+#path .programs{grid-template-columns:minmax(0,1fr)}
+#path .programs>.program-copy:first-child{max-width:920px;margin-inline:auto}

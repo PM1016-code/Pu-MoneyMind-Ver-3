@@ -589,6 +589,9 @@
 </style>
   <style>
   .navlinks a.is-active{border-color:#a78345;background:linear-gradient(135deg,#6f4f29,#92703a);color:#fff8ec;box-shadow:0 9px 22px rgba(69,44,15,.25),inset 0 1px rgba(255,240,202,.15)}
+  #top .proofbar,#top .source-note,#fit-quiz-section,#path .programs>.program-copy:nth-child(2){display:none!important}
+  #path .programs{grid-template-columns:minmax(0,1fr)}
+  #path .programs>.program-copy:first-child{max-width:920px;margin-inline:auto}
   </style>
   <script>
   (()=>{const legacyPages={1:'#top',2:'#about',3:'#tools',4:'#timeframe-quiz',5:'#proof'};const rawPage=new URLSearchParams(location.search).get('page');if(legacyPages[rawPage]&&!location.hash){history.replaceState(null,'',location.pathname+legacyPages[rawPage])}window.addEventListener('DOMContentLoaded',()=>{const reviews=document.getElementById('reviews'),risk=document.getElementById('risk-check');if(reviews&&risk)risk.insertAdjacentElement('afterend',reviews);const links=[...document.querySelectorAll('.navlinks a[href^="#"]')],sections=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);const setActive=id=>links.forEach(link=>link.classList.toggle('is-active',link.getAttribute('href')==='#'+id));const observer='IntersectionObserver'in window?new IntersectionObserver(entries=>{entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0]&&setActive(entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0].target.id)},{rootMargin:'-35% 0px -55%',threshold:[0,.2,.45,.7]}):null;sections.forEach(section=>observer?.observe(section));if(location.hash)document.querySelector(location.hash)?.scrollIntoView();else setActive('top')})})();
