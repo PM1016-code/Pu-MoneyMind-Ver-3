@@ -592,7 +592,7 @@
   #top .proofbar,#top .source-note,#fit-quiz-section,#path .programs>.program-copy:nth-child(2){display:none!important}
   #path .programs{grid-template-columns:minmax(0,1fr)}
   #path .programs>.program-copy:first-child{max-width:920px;margin-inline:auto}
-  #tmc-packages .tmc-price-note{font-size:2.46rem;line-height:1.28;margin-top:12px;color:#f3edf8}
+  #tmc-packages .tmc-price-note{font-size:1.64rem;line-height:1.32;margin-top:10px;color:#f3edf8}
   </style>
   <script>
   (()=>{const legacyPages={1:'#top',2:'#about',3:'#tools',4:'#timeframe-quiz',5:'#proof'};const rawPage=new URLSearchParams(location.search).get('page');if(legacyPages[rawPage]&&!location.hash){history.replaceState(null,'',location.pathname+legacyPages[rawPage])}window.addEventListener('DOMContentLoaded',()=>{const reviews=document.getElementById('reviews'),tmcPackages=document.getElementById('tmc-packages');if(reviews&&tmcPackages)tmcPackages.insertAdjacentElement('afterend',reviews);const links=[...document.querySelectorAll('.navlinks a[href^="#"]')],sections=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);const setActive=id=>links.forEach(link=>link.classList.toggle('is-active',link.getAttribute('href')==='#'+id));const observer='IntersectionObserver'in window?new IntersectionObserver(entries=>{entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0]&&setActive(entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0].target.id)},{rootMargin:'-35% 0px -55%',threshold:[0,.2,.45,.7]}):null;sections.forEach(section=>observer?.observe(section));if(location.hash)document.querySelector(location.hash)?.scrollIntoView();else setActive('top')})})();
