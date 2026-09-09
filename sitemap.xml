@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/</loc></url>
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/en.html</loc></url>
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/privacy.html</loc></url>
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/privacy-en.html</loc></url>
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/terms.html</loc></url>
-  <url><loc>https://pm1016-code.github.io/Pu-MoneyMind-Ver-3/terms-en.html</loc></url>
+  <url><loc>https://pumoneymind.com/</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pumoneymind.com/en.html</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pumoneymind.com/privacy.html</loc><lastmod>2026-09-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://pumoneymind.com/privacy-en.html</loc><lastmod>2026-09-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://pumoneymind.com/terms.html</loc><lastmod>2026-09-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://pumoneymind.com/terms-en.html</loc><lastmod>2026-09-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
