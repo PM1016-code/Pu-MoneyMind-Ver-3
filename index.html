@@ -576,29 +576,33 @@
     @media(max-width:620px){html{scroll-padding-top:158px}.navin{grid-template-columns:1fr auto;grid-template-areas:"brand language" "sections sections";padding-bottom:8px}.navin>.gold-cta{display:none}.navlinks{margin-inline:0}.navlinks a{padding:7px 10px;font-size:.72rem}}
   </style>
 <style>
-#path .program-copy{display:flex;flex-direction:column;padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-radius:24px;min-width:0}
-#path .program-copy{background:#fff;border-color:#e7ddfb}
-#path .program-copy .chip{align-self:flex-start;color:#7058a9}
-#path .program-copy h3{font-size:clamp(1.4rem,2vw,1.8rem);line-height:1.4;margin:20px 0 14px}
-#path .program-copy h4{font-size:1.2rem;line-height:1.65;font-weight:400;margin:0 0 18px;color:var(--text)}
-#path .program-copy p{font-size:1.05rem;line-height:1.85;margin:0 0 18px;color:var(--muted)}
-#path .program-copy strong{font-weight:400;color:#282032}
-#path .program-copy h4{color:#282032}
-#path .program-copy p{color:#655e70}
-#path .program-copy .price{color:#7058a9}
-#path .program-copy .price s{color:#766f82!important}
-#path .program-copy .program-highlight{padding:14px 18px;border-left:2px solid #c5a76e;background:rgba(197,167,110,.07);border-radius:0 12px 12px 0}
-#path .program-copy ul{margin:0 0 24px;line-height:1.8}
-#path .program-copy li{margin-bottom:8px}
-#path .program-footer{margin-top:auto;padding-top:12px}
-#path .program-footer .btn{width:100%;text-align:center;white-space:normal;line-height:1.6}
-#path .program-footer .price{margin:0 0 20px}
+#path .masterclass-heading{max-width:980px;text-align:center;margin-inline:auto}
+#path .masterclass-heading .eyebrow{color:#8a6828!important}
+#path .masterclass-heading h2{font-size:clamp(2.5rem,5vw,4.8rem);background:linear-gradient(100deg,#7b551c,#d6a948 48%,#8a6124);-webkit-background-clip:text;background-clip:text;color:transparent}
+#path .masterclass-heading p{max-width:850px;margin-inline:auto;color:#554d60}
+#path .masterclass-plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,22px);align-items:stretch}
+#path .masterclass-plan{--plan-accent:#d4d5dc;--plan-glow:rgba(190,195,206,.22);position:relative;display:flex;flex-direction:column;overflow:hidden;min-width:0;padding:clamp(22px,2.2vw,30px);border:1px solid var(--plan-accent);border-radius:24px;background:linear-gradient(155deg,#181820,#0e0e13 72%);color:#f9f6ee;box-shadow:0 18px 42px rgba(19,13,26,.18),inset 0 0 32px var(--plan-glow)}
+#path .masterclass-plan::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 6%,var(--plan-glow),transparent 30%);pointer-events:none}
+#path .masterclass-plan.transform{--plan-accent:#d9a528;--plan-glow:rgba(224,169,39,.23)}
+#path .masterclass-plan.master{--plan-accent:#39b987;--plan-glow:rgba(42,183,132,.2)}
+#path .masterclass-plan-mark{position:relative;display:grid;place-items:center;width:48px;height:48px;margin-bottom:14px;border:1px solid var(--plan-accent);border-radius:14px;color:var(--plan-accent);font-size:1.45rem;background:rgba(255,255,255,.035);box-shadow:0 0 18px var(--plan-glow)}
+#path .masterclass-plan h3{position:relative;margin:0;color:#fff9e8;font-size:clamp(1.75rem,2.1vw,2.25rem);line-height:1.12}
+#path .masterclass-plan-subtitle{position:relative;margin:7px 0 18px;color:#f2e6c7;font-size:1rem;line-height:1.45}
+#path .masterclass-audience{position:relative;margin:0 -4px 18px;padding:13px 4px;border-block:1px solid color-mix(in srgb,var(--plan-accent) 45%,transparent);color:#d8d2dc;text-align:center;font-size:.95rem}
+#path .masterclass-price{position:relative;margin:0 0 20px;color:#ffe084;font-size:clamp(2.3rem,3.6vw,3.4rem);font-weight:700;line-height:1;text-align:center;text-shadow:0 0 20px var(--plan-glow)}
+#path .masterclass-price small{font-size:.92rem;font-weight:400;color:#f3dd9d}
+#path .masterclass-features{position:relative;display:grid;gap:11px;margin:0 0 20px;padding:0;list-style:none;color:#f0edf3;font-size:.92rem;line-height:1.5}
+#path .masterclass-features li{position:relative;padding-left:28px}
+#path .masterclass-features li::before{content:"✓";position:absolute;left:0;top:.05em;display:grid;place-items:center;width:19px;height:19px;border:1px solid var(--plan-accent);border-radius:50%;color:#ffe08a;font-size:.7rem}
+#path .masterclass-plan-note{position:relative;margin:auto 0 16px;padding:12px 13px;border:1px solid color-mix(in srgb,var(--plan-accent) 58%,transparent);border-radius:12px;background:color-mix(in srgb,var(--plan-accent) 13%,transparent);color:#f8edcf;font-size:.78rem;line-height:1.6;text-align:center}
+#path .masterclass-register{position:relative;width:100%;margin-top:auto;border:1px solid color-mix(in srgb,var(--plan-accent) 70%,#fff);background:linear-gradient(135deg,color-mix(in srgb,var(--plan-accent) 76%,#fff),var(--plan-accent));color:#151018;font-weight:700;box-shadow:0 12px 28px var(--plan-glow)}
+#path .masterclass-disclaimer{margin:20px auto 0;color:#6c6577;font-size:.78rem;text-align:center}
+@media(max-width:1040px){#path .masterclass-plans{grid-template-columns:1fr 1fr}#path .masterclass-plan.master{grid-column:1/-1;width:min(100%,620px);justify-self:center}}
+@media(max-width:700px){#path .masterclass-plans{grid-template-columns:1fr}#path .masterclass-plan.master{grid-column:auto;width:100%}#path .masterclass-plan{padding:22px 20px}}
 </style>
   <style>
   .navlinks a.is-active{border-color:#a78345;background:linear-gradient(135deg,#6f4f29,#92703a);color:#fff8ec;box-shadow:0 9px 22px rgba(69,44,15,.25),inset 0 1px rgba(255,240,202,.15)}
-  #top .proofbar,#top .source-note,#fit-quiz-section,#path .programs>.program-copy:nth-child(2){display:none!important}
-  #path .programs{grid-template-columns:minmax(0,1fr)}
-  #path .programs>.program-copy:first-child{max-width:920px;margin-inline:auto}
+  #top .proofbar,#top .source-note,#fit-quiz-section{display:none!important}
   #tmc-packages .tmc-price-note{font-size:1.23rem;line-height:1.36;margin-top:8px;color:#f3edf8}
   .final-consult-headline{font-size:clamp(1.55rem,3vw,3rem)!important;line-height:1.22!important}
   </style>
@@ -753,16 +757,7 @@
     })();
     </script>
 
-<section class="soft" id="path" data-page="4"><div class="wrap"><div class="heading"><span class="eyebrow" style="color:#7058a9">Learning path</span><h2>เริ่มให้ถูกทาง แล้วค่อย ๆ สร้างระบบเทรดที่เป็นของคุณ</h2><p>เริ่มจากสิ่งที่คุณมีตอนนี้ก่อนก็ได้ ค่อย ๆ ทำพื้นฐานให้ชัด แล้วค่อยต่อยอดเมื่อพร้อมนะ</p></div><div class="programs"><article class="card program-copy"><span class="chip">FOUNDATION → INTERMEDIATE</span>
-<h3>Master Class 2026</h3><h4>รู้เทคนิคเยอะแล้ว แต่ยังไม่รู้จะเริ่มเรียงจากตรงไหนดี?</h4>
-<p>มาเรียงสิ่งที่คุณรู้ให้เป็นขั้นตอนกัน ตั้งแต่อ่านตลาด วางแผน ไปจนถึงเลือก Setup เพื่อให้เราไม่ต้องไล่หา Entry แต่รู้ว่ากำลังรออะไรอยู่</p>
-<ul><li>30+ บทเรียน ดูย้อนหลังได้ 1 ปี</li><li>Weekly Live + Daily Gold Plan</li><li>Community &amp; Special Class</li><li>สิทธิ์เข้าร่วม On-site Class ตามรอบที่เปิด</li></ul>
-<div class="program-footer"><div class="price"><s style="font-size:1rem;color:var(--muted)">14,900 บาท</s> <strong>8,900 บาท</strong><small>ก่อนชำระเงิน ทักมาเช็กวันสิ้นสุดโปรโมชันและเงื่อนไขกับทีมอีกครั้งนะ</small></div><a class="btn program-deep track" data-cta="masterclass" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">เริ่มวางระบบเทรด →</a></div></article>
-<article class="card program-copy"><span class="chip">ADVANCED COACHING</span><h3>TMC — TOOLS MASTERY COACHING</h3><h4>มีพื้นฐานแล้ว แต่ยังวนกลับมาเจอปัญหาเดิม ๆ อยู่ไหม?</h4>
-<p>มาฝึกใช้ GSS/TTS เก็บสถิติ และเปิดดูการเทรดของตัวเองไปกับโค้ชกัน จะได้เห็นว่าอะไรควรทำซ้ำ และตรงไหนควรค่อย ๆ ปรับ</p>
-<ul><li>ฝึกใช้ GSS/TTS พร้อมการบ้าน</li><li>วิเคราะห์จากสถิติการเทรดของตัวเอง</li><li>Live Coaching &amp; Feedback</li><li>ค่อย ๆ พัฒนาระบบที่เข้ากับคุณ</li></ul>
-<p class="program-highlight"><strong>ฝึกจริง → ดูข้อมูล → รับ Feedback → ปรับใช้</strong></p>
-<div class="program-footer"><a class="btn program-deep tmc-plan-champagne" href="#tmc-packages">ยกระดับระบบเทรด →</a></div></article></div></div></section>
+<section class="soft" id="path" data-page="4"><div class="wrap"><div class="heading masterclass-heading"><span class="eyebrow"># MASTER CLASS</span><h2>FROM BASIC TO ADVANCED</h2><p>เริ่มต้นไปสู่ความเชี่ยวชาญ เทรดได้ด้วยแนวคิดและกลยุทธ์แบบ SMC</p></div><div class="masterclass-plans"><article class="masterclass-plan starter"><span class="masterclass-plan-mark" aria-hidden="true">★</span><h3>Starter</h3><p class="masterclass-plan-subtitle">เริ่มต้นสู่เส้นทาง</p><p class="masterclass-audience">ผู้ที่เพิ่งเริ่มต้นเทรด</p><div class="masterclass-price">990 <small>บาท</small></div><ul class="masterclass-features"><li>Discord : MasterClass Member (Role) 1 เดือน</li><li>Discord : Community Member (Role) 7 วัน</li><li>Whoop Class วิดีโอเรียน 1 เดือน</li><li>ชมสด Online via Zoom 1 ครั้ง</li></ul><a class="btn masterclass-register track" data-cta="masterclass-starter" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">ลงทะเบียนทันที</a></article><article class="masterclass-plan transform"><span class="masterclass-plan-mark" aria-hidden="true">♛</span><h3>Transform Trader</h3><p class="masterclass-plan-subtitle">พัฒนาทักษะ ยกระดับการเทรด</p><p class="masterclass-audience">นักเทรดที่ต้องการพัฒนา</p><div class="masterclass-price">3,960 <small>บาท</small></div><ul class="masterclass-features"><li>Discord : MasterClass Member (Role) 4 เดือน</li><li>Discord : Community Member (Role) 14 วัน</li><li>Whoop Class วิดีโอเรียน 4 เดือน</li><li>ชมสด Online via Zoom 4 ครั้ง</li></ul><p class="masterclass-plan-note">หากต้องการเรียน On-site สถานที่มีค่าใช้จ่าย 600 บาท/ครั้ง<br>Discord เพิ่ม Membership ให้ได้รับชมย้อนหลังตลอด</p><a class="btn masterclass-register track" data-cta="masterclass-transform" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">ลงทะเบียนทันที</a></article><article class="masterclass-plan master"><span class="masterclass-plan-mark" aria-hidden="true">◆</span><h3>Master Trader</h3><p class="masterclass-plan-subtitle">ก้าวสู่ความเป็น Trader ตัวจริง</p><p class="masterclass-audience">นักเทรดที่มุ่งสู่ความเชี่ยวชาญ</p><div class="masterclass-price">11,880 <small>บาท</small></div><ul class="masterclass-features"><li>Discord : MasterClass Member (Role) 1 ปี</li><li>Discord : Community Member (Role) 30 วัน</li><li>Whoop Class วิดีโอเรียน 1 ปี</li><li>ชมสด Online via Zoom 12 ครั้ง</li><li>ฟรี เรียนสถานที่ 3 ครั้ง</li></ul><a class="btn masterclass-register track" data-cta="masterclass-master" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">ลงทะเบียนทันที</a></article></div><p class="masterclass-disclaimer">โปรแกรมเป็นการศึกษาและฝึกทักษะ ไม่ใช่คำรับรองผลลัพธ์หรือกำไรจากการเทรด</p></div></section>
 
 <section id="tmc-packages" data-page="3"><div class="wrap"><div class="heading"><span class="eyebrow">TMC packages</span><h2>เลือกแพ็กเกจที่เข้ากับเวลาของคุณได้เลย</h2></div><div class="packages"><article class="card panel"><span class="chip">FOCUS 4 MONTHS</span><h3>เปลี่ยนวิธีเทรด ภายใน 120 วัน</h3><ul><li>Fullpack GSS + TTS</li><li>TMC-Stat Framework</li><li>Program &amp; Coaching 120 วัน</li><li>สร้างระบบเทรดที่วัดผลได้</li></ul><div class="price">US$658<small class="tmc-price-note">เฉลี่ย US$164.50/เดือน · ยังไม่รวมค่าธรรมเนียมที่อาจเกิดขึ้น</small></div><a class="btn alt track" data-cta="tmc-4m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">แพ็กเกจ 4 เดือน</a></article><article class="card panel featured"><span class="chip" style="color:var(--yellow)">FOCUS 12 MONTHS</span><h3>สร้างระบบเทรดสู่ระดับ Pro Trader</h3><ul><li>ได้ทุกอย่างใน FOCUS 4 MONTHS</li><li>เก็บข้อมูลระยะยาว</li><li>Review &amp; Optimize อย่างต่อเนื่อง</li><li>Coaching และคำปรึกษาตลอด 1 ปี</li></ul><div class="price">US$1,649<small class="tmc-price-note">เฉลี่ย US$137.42/เดือน · ต่างจากอัตรา 4 เดือนประมาณ US$27.08/เดือน</small></div><a class="btn track" data-cta="tmc-12m" href="https://lin.ee/N5oj5Q4" target="_blank" rel="noopener noreferrer">แพ็กเกจ 12 เดือน</a></article></div></div></section>
 
